@@ -1,0 +1,217 @@
+{
+  "export_version": "0.063",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Apply matrix to mesh": {
+      "bl_idname": "SvMatrixApplyJoinNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        180.12278747558594,
+        193.0559844970703
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Circle": {
+      "bl_idname": "SvCircleNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -227.01229858398438,
+        216.657958984375
+      ],
+      "params": {
+        "mode_": 0,
+        "rad_": 1.0
+      },
+      "width": 140.0
+    },
+    "Int": {
+      "bl_idname": "IntegerNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -228.5332794189453,
+        -230.20095825195312
+      ],
+      "params": {
+        "int_": 90
+      },
+      "width": 140.0
+    },
+    "Lathe": {
+      "bl_idname": "SvLatheNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        480.6533508300781,
+        231.18551635742188
+      ],
+      "params": {
+        "Steps": 20
+      },
+      "width": 140.0
+    },
+    "Matrix in": {
+      "bl_idname": "MatrixGenNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -0.6174392700195312,
+        -23.50078582763672
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Vector X | Y | Z": {
+      "bl_idname": "svAxisInputNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "X",
+      "location": [
+        -154.4162139892578,
+        -109.03485107421875
+      ],
+      "params": {
+        "current_axis": "X",
+        "selected_axis": "X"
+      },
+      "width": 100.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -323.2544860839844,
+        -41.463417053222656
+      ],
+      "params": {
+        "x_": -2.700000047683716
+      },
+      "width": 100.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        791.618896484375,
+        266.6910095214844
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Vector in",
+      "Vectors",
+      "Matrix in",
+      "Location"
+    ],
+    [
+      "Vector X | Y | Z",
+      "Vectors",
+      "Matrix in",
+      "Rotation"
+    ],
+    [
+      "Int",
+      "Integer",
+      "Matrix in",
+      "Angle"
+    ],
+    [
+      "Circle",
+      "Vertices",
+      "Apply matrix to mesh",
+      "Vertices"
+    ],
+    [
+      "Circle",
+      "Edges",
+      "Apply matrix to mesh",
+      "Edges"
+    ],
+    [
+      "Matrix in",
+      "Matrix",
+      "Apply matrix to mesh",
+      "Matrices"
+    ],
+    [
+      "Apply matrix to mesh",
+      "Vertices",
+      "Lathe",
+      "Verts"
+    ],
+    [
+      "Apply matrix to mesh",
+      "Edges",
+      "Lathe",
+      "Edges"
+    ],
+    [
+      "Lathe",
+      "Verts",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Lathe",
+      "Poly",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "export_version": "0.063",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Box": {
+      "bl_idname": "SvBoxNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -212.13821411132812,
+        -32.263671875
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Note": {
+      "bl_idname": "NoteNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -699.5073852539062,
+        151.48680114746094
+      ],
+      "params": {
+        "show_text": 0,
+        "text": "\"\"\"\nin verts v .=[[]] n=1\nout verts v\n\"\"\"\n\nverts = verts\n\n#copy this in the text editor nad load it with scipt node lite\n"
+      },
+      "width": 400.0
+    },
+    "Scripted Node Lite.001": {
+      "bl_idname": "SvScriptNodeLite",
+      "color": [
+        0.0,
+        0.800000011920929,
+        0.949999988079071
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        41.30840301513672,
+        53.2747802734375
+      ],
+      "params": {
+        "float_list": [
+          0.0,
+          0.30000001192092896,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          14.0,
+          15.0,
+          16.0,
+          17.0,
+          18.0,
+          19.0,
+          20.0,
+          21.0,
+          22.0,
+          23.0,
+          24.0,
+          25.0,
+          26.0,
+          27.0,
+          28.0,
+          29.0,
+          30.0,
+          31.0
+        ],
+        "inject_params": 0,
+        "script_name": "simple_verts_io.py",
+        "script_str": "\"\"\"\nin verts v .=[[]] n=1\nout verts v\n\"\"\"\n\nverts = verts\n\n#copy this in the text editor nad load it with scipt node lite\n"
+      },
+      "snlite_ui": [],
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        256.66107177734375,
+        80.7055435180664
+      ],
+      "params": {
+        "activate": 1
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Box",
+      "Vers",
+      "Scripted Node Lite.001",
+      "verts"
+    ],
+    [
+      "Scripted Node Lite.001",
+      "verts",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Box",
+      "Pols",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}

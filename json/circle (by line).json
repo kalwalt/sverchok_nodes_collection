@@ -1,0 +1,193 @@
+{
+  "export_version": "0.063",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Line": {
+      "bl_idname": "LineNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -438.8159484863281,
+        -80.4150161743164
+      ],
+      "params": {
+        "int_": 20,
+        "step_": 0.5
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        2.9205703735351562,
+        -67.30774688720703
+      ],
+      "params": {
+        "items_": "SINE"
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        12.177003860473633,
+        40.57994842529297
+      ],
+      "params": {
+        "items_": "COSINE"
+      },
+      "width": 140.0
+    },
+    "Stethoscope": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        418.2447509765625,
+        78.29264831542969
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Vector in.001": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        232.177001953125,
+        28.787757873535156
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -207.822998046875,
+        3.39793062210083
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        391.6796875,
+        -130.0914764404297
+      ],
+      "params": {
+        "activate": 1,
+        "vertex_size": 3.202000141143799
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Line",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Vector in.001",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Vector in.001",
+      "Z"
+    ],
+    [
+      "Vector in.001",
+      "Vectors",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Line",
+      "Edges",
+      "Viewer Draw",
+      "edg_pol"
+    ],
+    [
+      "Vector in.001",
+      "Vectors",
+      "Stethoscope",
+      "Data"
+    ]
+  ]
+}

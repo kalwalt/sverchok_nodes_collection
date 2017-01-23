@@ -1,0 +1,338 @@
+{
+  "export_version": "0.063",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Int": {
+      "bl_idname": "IntegerNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1695.71142578125,
+        14.2939453125
+      ],
+      "params": {
+        "int_": 120
+      },
+      "width": 140.0
+    },
+    "Line": {
+      "bl_idname": "LineNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1438.36669921875,
+        58.897003173828125
+      ],
+      "params": {
+        "int_": 27,
+        "step_": 0.10000000149011612
+      },
+      "width": 140.0
+    },
+    "Stethoscope": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        214.0714111328125,
+        194.36415100097656
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.001": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -456.449462890625,
+        351.97979736328125
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.002": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -836.70166015625,
+        366.96844482421875
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.003": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -487.4598083496094,
+        109.22602081298828
+      ],
+      "params": {
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.004": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        314.07989501953125,
+        60.15504455566406
+      ],
+      "params": {
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Vector Math": {
+      "bl_idname": "VectorMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "ADD",
+      "location": [
+        96.19766998291016,
+        6.822746276855469
+      ],
+      "params": {
+        "items_": "ADD",
+        "scalar_output_socket": 0
+      },
+      "width": 140.0
+    },
+    "Vector Noise MK2": {
+      "bl_idname": "SvNoiseNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -950.9375610351562,
+        179.3289794921875
+      ],
+      "params": {
+        "noise_type": "STDPERLIN",
+        "out_mode": "VECTOR",
+        "seed": 7
+      },
+      "width": 241.6976318359375
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -154.09298706054688,
+        177.3494873046875
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -669.4280395507812,
+        271.9039001464844
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        389.10809326171875,
+        -43.52204132080078
+      ],
+      "params": {
+        "activate": 1
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Int",
+      "Integer",
+      "Line",
+      "N\u00ba Vertices"
+    ],
+    [
+      "Line",
+      "Vertices",
+      "Vector Noise MK2",
+      "Vertices"
+    ],
+    [
+      "Vector Noise MK2",
+      "Noise V",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "Z",
+      "Vector in",
+      "Z"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Vector Math",
+      "U"
+    ],
+    [
+      "Line",
+      "Vertices",
+      "Vector Math",
+      "V"
+    ],
+    [
+      "Vector Math",
+      "W",
+      "Stethoscope.004",
+      "Data"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Stethoscope",
+      "Data"
+    ],
+    [
+      "Line",
+      "Vertices",
+      "Stethoscope.002",
+      "Data"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Stethoscope.003",
+      "Data"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Stethoscope.001",
+      "Data"
+    ],
+    [
+      "Vector Math",
+      "W",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Line",
+      "Edges",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}

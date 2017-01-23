@@ -1,0 +1,365 @@
+{
+  "export_version": "0.063",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Float": {
+      "bl_idname": "FloatNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -617.515625,
+        99.93984985351562
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -239.07371520996094,
+        206.78631591796875
+      ],
+      "params": {
+        "items_": "MUL"
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -241.15328979492188,
+        63.204803466796875
+      ],
+      "params": {
+        "items_": "MUL"
+      },
+      "width": 140.0
+    },
+    "Plane": {
+      "bl_idname": "PlaneNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1169.4320068359375,
+        59.844512939453125
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Stethoscope": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        214.0714111328125,
+        194.36415100097656
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.001": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -489.4870300292969,
+        298.0268859863281
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.002": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -836.70166015625,
+        366.96844482421875
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.003": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -483.39532470703125,
+        210.93067932128906
+      ],
+      "params": {
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Vector Math": {
+      "bl_idname": "VectorMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "ADD",
+      "location": [
+        96.19766998291016,
+        6.822746276855469
+      ],
+      "params": {
+        "items_": "ADD",
+        "scalar_output_socket": 0
+      },
+      "width": 140.0
+    },
+    "Vector Noise MK2": {
+      "bl_idname": "SvNoiseNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -950.9375610351562,
+        179.3289794921875
+      ],
+      "params": {
+        "out_mode": "VECTOR",
+        "seed": 2
+      },
+      "width": 241.6976318359375
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -44.3526611328125,
+        128.53125
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -676.866943359375,
+        245.0992431640625
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        334.0602722167969,
+        -10.760869979858398
+      ],
+      "params": {
+        "activate": 1
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Plane",
+      "Vertices",
+      "Vector Noise MK2",
+      "Vertices"
+    ],
+    [
+      "Vector Noise MK2",
+      "Noise V",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math",
+      "X"
+    ],
+    [
+      "Float",
+      "Float",
+      "Math",
+      "Y"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Float",
+      "Float",
+      "Math.001",
+      "Y"
+    ],
+    [
+      "Math",
+      "float",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Stethoscope",
+      "Data"
+    ],
+    [
+      "Plane",
+      "Vertices",
+      "Stethoscope.002",
+      "Data"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Stethoscope.003",
+      "Data"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Vector Math",
+      "U"
+    ],
+    [
+      "Plane",
+      "Vertices",
+      "Vector Math",
+      "V"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Stethoscope.001",
+      "Data"
+    ],
+    [
+      "Vector Math",
+      "W",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Plane",
+      "Polygons",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}
