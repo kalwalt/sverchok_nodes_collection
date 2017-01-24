@@ -3,6 +3,25 @@
   "framed_nodes": {},
   "groups": {},
   "nodes": {
+    "Debug print": {
+      "bl_idname": "SvDebugPrintNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -24.659364700317383,
+        168.6592559814453
+      ],
+      "params": {
+        "print_data": 1
+      },
+      "width": 165.02435302734375
+    },
     "Scripted Node": {
       "bl_idname": "SvScriptNode",
       "color": [
@@ -14,8 +33,8 @@
       "hide": false,
       "label": "polyvox test.py",
       "location": [
-        -192.5502471923828,
-        100.71086120605469
+        -303.0025634765625,
+        292.18817138671875
       ],
       "params": {
         "button_names": "",
@@ -23,11 +42,11 @@
         "float_list": [
           0.0,
           1.0,
-          0.30000001192092896,
-          3.0,
-          4.0,
-          5.0,
-          6.0,
+          0.05000000074505806,
+          0.05000000074505806,
+          2.0,
+          0.009999999776482582,
+          1.179999828338623,
           7.0,
           8.0,
           9.0,
@@ -59,8 +78,8 @@
           0,
           32,
           30,
-          3,
-          4,
+          5,
+          7,
           5,
           6,
           7,
@@ -90,33 +109,10 @@
           31
         ],
         "script_name": "polyvox test.py",
-        "script_str": "import sys\nsys.path.append(\"//home/walter/blender-2.78a-linux-glibc211-x86_64/2.78/scripts/addons/sverchok-master/node_scripts/templates/polyvox/lib\") #This is just to point to the generated bindings\n\nimport PolyVoxCore as pv\n\ndef sv_main(vol_region=32,sphere_radius=30):\n    in_sockets = [\n        ['s', 'Volume region', vol_region],\n        ['s', 'Sphere radius', sphere_radius]\n       ]\n\n    #Create a 64x64x64 volume of integers\n    #volume = vol_region - 1\n    volume = 32\n    r = pv.Region(pv.Vector3Dint32_t(0,0,0), pv.Vector3Dint32_t(volume,volume,volume))\n    vol = pv.SimpleVolumeuint8(r)\n\n    #Now fill the volume with our data (a sphere)\n    v3dVolCenter = pv.Vector3Dint32_t(vol.getWidth() // 2, vol.getHeight() // 2, vol.getDepth() // 2)\n    sphereRadius = 30\n    #This three-level for loop iterates over every voxel in the volume\n    for z in range(vol.getDepth()):\n       for y in range(vol.getHeight()):\n          for x in range(vol.getWidth()):\n             #Compute how far the current position is from the center of the volume\n             fDistToCenter = (pv.Vector3Dint32_t(x,y,z) - v3dVolCenter).length()\n\n             #If the current voxel is less than 'radius' units from the center then we make it solid.\n             if(fDistToCenter <= sphereRadius):\n                #Our new voxel value\n                uVoxelValue = 255\n             else:\n                uVoxelValue = 0\n\n             #Write the voxel value into the volume\n             vol.setVoxelAt(x, y, z, uVoxelValue);\n\n    #Create a mesh, pass it to the extractor and generate the mesh\n    mesh = pv.SurfaceMeshPositionMaterialNormal()\n    extractor = pv.CubicSurfaceExtractorWithNormalsSimpleVolumeuint8(vol, r, mesh)\n    extractor.execute()\n\n    #That's all of the PolyVox generation done, now to convert the output to something OpenGL can read efficiently\n\n    import numpy as np\n\n    indices = np.array(mesh.getIndices()) #Throw in the vertex indices into an array\n    #The vertices and normals are placed in an interpolated array like [vvvnnn,vvvnnn,vvvnnn]\n    vertices = np.array([[vertex.getPosition().getX(), vertex.getPosition().getY(), vertex.getPosition().getZ()] for vertex in mesh.getVertices()] )\n    #to test the vertices...\n    print(vertices)\n\n    Verts = vertices\n    Edges = []\n    \n    out_sockets = [\n        ['v', 'Verts', [Verts]],\n        ['s', 'Edges', [Edges]],\n    ]\n\n    return in_sockets, out_sockets\n"
+        "script_str": "import sys\nsys.path.append(\"//home/walter/blender-2.78a-linux-glibc211-x86_64/2.78/scripts/addons/sverchok-master/node_scripts/templates/polyvox/lib\") #This is just to point to the generated bindings\n\nimport PolyVoxCore as pv\n\ndef sv_main(vol_region=32,sphere_radius=30):\n    in_sockets = [\n        ['s', 'Volume region', vol_region],\n        ['s', 'Sphere radius', sphere_radius]\n       ]\n\n    #Create a 64x64x64 volume of integers\n    #volume = vol_region - 1\n    volume = 32\n    r = pv.Region(pv.Vector3Dint32_t(0,0,0), pv.Vector3Dint32_t(3,3,3))\n    vol = pv.SimpleVolumeuint8(r)\n\n    #Now fill the volume with our data (a sphere)\n    v3dVolCenter = pv.Vector3Dint32_t(vol.getWidth() // 2, vol.getHeight() // 2, vol.getDepth() // 2)\n    sphereRadius = 0\n    #print(sphere_radius)\n    #This three-level for loop iterates over every voxel in the volume\n    for z in range(vol.getDepth()):\n       for y in range(vol.getHeight()):\n          for x in range(vol.getWidth()):\n             #Compute how far the current position is from the center of the volume\n             fDistToCenter = (pv.Vector3Dint32_t(x,y,z) - v3dVolCenter).length()\n\n             #If the current voxel is less than 'radius' units from the center then we make it solid.\n             if(fDistToCenter <= sphereRadius):\n                #Our new voxel value\n                uVoxelValue = 255\n             else:\n                uVoxelValue = 0\n\n             #Write the voxel value into the volume\n             #print(uVoxelValue)\n             vol.setVoxelAt(x, y, z, uVoxelValue);\n\n    #Create a mesh, pass it to the extractor and generate the mesh\n    mesh = pv.SurfaceMeshPositionMaterialNormal()\n    extractor = pv.CubicSurfaceExtractorWithNormalsSimpleVolumeuint8(vol, r, mesh)\n    extractor.execute()\n\n    #That's all of the PolyVox generation done, now to convert the output to something OpenGL can read efficiently\n\n    vertices = []\n    verts_out = []\n   \n        \n    #indices = np.array(mesh.getIndices()) #Throw in the vertex indices into an array\n    indices = mesh.getIndices()\n    Nindx = mesh.getNoOfIndices()\n    \n    print(\"Indices: \" + str(indices))\n    print(\"N. of Indices: \" + str(Nindx))\n    \n    for vertex in mesh.getVertices():\n       \n       p = vertex.getPosition()\n       \n       vertices.append(tuple([p.getX(), p.getY(), p.getZ()]))\n       \n    print(\"Vertices: \" + str(vertices))\n    print(\"N. vert: \" + str(mesh.getNoOfVertices()))\n    \n    #Verts = []\n    verts_out = []\n    #verts_out = [mesh.getVertices()]\n    Edges = []\n    \n    for i in mesh.getIndices():\n        \n        edg = [indices[i],indices[i+1]]       \n        Edges.append(tuple(edg))\n    \n    print(\"Total edges: \" + str(len(Edges)))\n    #Verts = vertices\n    out_sockets = [\n        ['v', 'Verts', [verts_out]],\n        ['s', 'Edges', [Edges]],\n    ]\n    \n\n    verts_out.append(vertices)\n    Edges.append(indices)\n   \n    #Edges = []\n\n    return in_sockets, out_sockets\n",
+        "user_name": "templates"
       },
-      "width": 140.0
-    },
-    "Stethoscope": {
-      "bl_idname": "SvStethoscopeNode",
-      "color": [
-        0.5,
-        0.5,
-        1.0
-      ],
-      "height": 100.0,
-      "hide": false,
-      "label": "",
-      "location": [
-        19.792015075683594,
-        145.8248748779297
-      ],
-      "params": {
-        "activate": 1,
-        "text_color": [
-          0.949999988079071,
-          0.949999988079071,
-          0.949999988079071
-        ]
-      },
-      "width": 140.0
+      "width": 176.03506469726562
     },
     "Viewer Draw": {
       "bl_idname": "ViewerNode2",
@@ -129,11 +125,12 @@
       "hide": false,
       "label": "",
       "location": [
-        356.7378234863281,
-        138.44473266601562
+        330.646484375,
+        331.5284423828125
       ],
       "params": {
-        "activate": 1
+        "activate": 1,
+        "vertex_size": 4.03000020980835
       },
       "width": 140.0
     }
@@ -142,14 +139,26 @@
     [
       "Scripted Node",
       "Verts",
-      "Stethoscope",
-      "Data"
+      "Debug print",
+      "Data 0"
+    ],
+    [
+      "Scripted Node",
+      "Edges",
+      "Debug print",
+      "Data 1"
     ],
     [
       "Scripted Node",
       "Verts",
       "Viewer Draw",
       "vertices"
+    ],
+    [
+      "Scripted Node",
+      "Edges",
+      "Viewer Draw",
+      "edg_pol"
     ]
   ]
 }

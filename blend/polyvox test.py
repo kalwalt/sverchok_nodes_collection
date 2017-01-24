@@ -12,12 +12,13 @@ def sv_main(vol_region=32,sphere_radius=30):
     #Create a 64x64x64 volume of integers
     #volume = vol_region - 1
     volume = 32
-    r = pv.Region(pv.Vector3Dint32_t(0,0,0), pv.Vector3Dint32_t(volume,volume,volume))
+    r = pv.Region(pv.Vector3Dint32_t(0,0,0), pv.Vector3Dint32_t(3,3,3))
     vol = pv.SimpleVolumeuint8(r)
 
     #Now fill the volume with our data (a sphere)
     v3dVolCenter = pv.Vector3Dint32_t(vol.getWidth() // 2, vol.getHeight() // 2, vol.getDepth() // 2)
-    sphereRadius = 30
+    sphereRadius = 0
+    #print(sphere_radius)
     #This three-level for loop iterates over every voxel in the volume
     for z in range(vol.getDepth()):
        for y in range(vol.getHeight()):
@@ -33,6 +34,7 @@ def sv_main(vol_region=32,sphere_radius=30):
                 uVoxelValue = 0
 
              #Write the voxel value into the volume
+             #print(uVoxelValue)
              vol.setVoxelAt(x, y, z, uVoxelValue);
 
     #Create a mesh, pass it to the extractor and generate the mesh
@@ -43,19 +45,58 @@ def sv_main(vol_region=32,sphere_radius=30):
     #That's all of the PolyVox generation done, now to convert the output to something OpenGL can read efficiently
 
     import numpy as np
-
-    indices = np.array(mesh.getIndices()) #Throw in the vertex indices into an array
+    vertices = []
+    verts_out = []
+    #indices = np.array(mesh.getIndices()) #Throw in the vertex indices into an array
     #The vertices and normals are placed in an interpolated array like [vvvnnn,vvvnnn,vvvnnn]
-    vertices = np.array([[vertex.getPosition().getX(), vertex.getPosition().getY(), vertex.getPosition().getZ()] for vertex in mesh.getVertices()] )
+    #vertices = [[vertex.getPosition().getX(), vertex.getPosition().getY(), vertex.getPosition().getZ()] for vertex in mesh.getVertices()]
     #to test the vertices...
-    print(vertices)
-
-    Verts = vertices
-    Edges = []
+    #print(str(vertices))
+    #print("N. vert: " + str(mesh.getNoOfVertices()))
+    for vertex in mesh.getVertices():
+       
+       xyz = []
+       p = vertex.getPosition()
+       
+       #xyx = [ p.getX(), p.getY(), p.getZ()]
+       vertices.append(tuple([p.getX(), p.getY(), p.getZ()]))
+       #verts_out.append(tuple([p.getX(), p.getY(), p.getZ()]))
+    print("vertices:" + str(vertices))
+    print("N. vert: " + str(mesh.getNoOfVertices()))
     
+    '''
+    for vertices in range(mesh.getNoOfVertices()):
+
+        finalVerts = []
+        #finalVerts.append(tuple(vertices[]))
+        #finalVerts = tuple(vertices.pop())
+        finalVerts = list(zip(vertices))
+    print("finalVerts:" + str(finalVerts))
+    '''
+
+    #Verts = []
+    verts_out = []
+    #verts_out = [mesh.getVertices()]
+    Edges = []
+    #Verts = vertices
     out_sockets = [
-        ['v', 'Verts', [Verts]],
+        ['v', 'Verts', [verts_out]],
         ['s', 'Edges', [Edges]],
     ]
+    #verts_out.extend(vertices)
+    vvvv=[(0.0,0.0,0.0),(1.0,0.0,0.0),]
+    #vvvv=[[1,1,1],]
+    print("vvvv: " + str(vvvv))
+    #verts_out.append(vvvv)
+
+    #verts_out.append(vertices.tolist())
+    verts_out.append(vertices)
+    #verts_out = vertices
+    #Edges = []
+
+#    out_sockets = [
+#        ['v', 'Verts', [Verts]],
+#        ['s', 'Edges', [Edges]],
+#    ]
 
     return in_sockets, out_sockets
