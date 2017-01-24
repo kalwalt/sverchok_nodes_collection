@@ -1,6 +1,6 @@
 import sys
 sys.path.append("//home/walter/blender-2.78a-linux-glibc211-x86_64/2.78/scripts/addons/sverchok-master/node_scripts/templates/polyvox/lib") #This is just to point to the generated bindings
-
+#sys.path.append("/polyvox/lib")
 import PolyVoxCore as pv
 
 def sv_main(vol_region=32,sphere_radius=30):
@@ -12,12 +12,12 @@ def sv_main(vol_region=32,sphere_radius=30):
     #Create a 64x64x64 volume of integers
     #volume = vol_region - 1
     volume = 32
-    r = pv.Region(pv.Vector3Dint32_t(0,0,0), pv.Vector3Dint32_t(3,3,3))
+    r = pv.Region(pv.Vector3Dint32_t(0,0,0), pv.Vector3Dint32_t(63,63,63))
     vol = pv.SimpleVolumeuint8(r)
 
     #Now fill the volume with our data (a sphere)
     v3dVolCenter = pv.Vector3Dint32_t(vol.getWidth() // 2, vol.getHeight() // 2, vol.getDepth() // 2)
-    sphereRadius = 0
+    sphereRadius = 20
     #print(sphere_radius)
     #This three-level for loop iterates over every voxel in the volume
     for z in range(vol.getDepth()):
@@ -44,59 +44,37 @@ def sv_main(vol_region=32,sphere_radius=30):
 
     #That's all of the PolyVox generation done, now to convert the output to something OpenGL can read efficiently
 
-    import numpy as np
     vertices = []
     verts_out = []
-    #indices = np.array(mesh.getIndices()) #Throw in the vertex indices into an array
-    #The vertices and normals are placed in an interpolated array like [vvvnnn,vvvnnn,vvvnnn]
-    #vertices = [[vertex.getPosition().getX(), vertex.getPosition().getY(), vertex.getPosition().getZ()] for vertex in mesh.getVertices()]
-    #to test the vertices...
-    #print(str(vertices))
-    #print("N. vert: " + str(mesh.getNoOfVertices()))
+   
+        
+    #Throw in the vertex indices into an array
+    indices = mesh.getIndices()
+    Nindx = mesh.getNoOfIndices()
+    
+    #uncomment the line above for testing pourpose only
+    #print("Indices: " + str(indices))
+    #print("N. of Indices: " + str(Nindx))
+    
     for vertex in mesh.getVertices():
        
-       xyz = []
        p = vertex.getPosition()
        
-       #xyx = [ p.getX(), p.getY(), p.getZ()]
        vertices.append(tuple([p.getX(), p.getY(), p.getZ()]))
-       #verts_out.append(tuple([p.getX(), p.getY(), p.getZ()]))
-    print("vertices:" + str(vertices))
-    print("N. vert: " + str(mesh.getNoOfVertices()))
     
-    '''
-    for vertices in range(mesh.getNoOfVertices()):
-
-        finalVerts = []
-        #finalVerts.append(tuple(vertices[]))
-        #finalVerts = tuple(vertices.pop())
-        finalVerts = list(zip(vertices))
-    print("finalVerts:" + str(finalVerts))
-    '''
-
-    #Verts = []
-    verts_out = []
-    #verts_out = [mesh.getVertices()]
-    Edges = []
-    #Verts = vertices
+    verts_out.append(vertices)
+    
+    #uncomment the line above for testing pourpose only  
+    #print("Vertices: " + str(vertices))
+    #print("N. vert: " + str(mesh.getNoOfVertices()))
+   
+    Tris = [(indices[i:i+3]) for i in range(0, len(indices)-1, 3)]
+  
     out_sockets = [
         ['v', 'Verts', [verts_out]],
-        ['s', 'Edges', [Edges]],
+        ['s', 'Tris', [Tris]],
     ]
-    #verts_out.extend(vertices)
-    vvvv=[(0.0,0.0,0.0),(1.0,0.0,0.0),]
-    #vvvv=[[1,1,1],]
-    print("vvvv: " + str(vvvv))
-    #verts_out.append(vvvv)
-
-    #verts_out.append(vertices.tolist())
-    verts_out.append(vertices)
-    #verts_out = vertices
-    #Edges = []
-
-#    out_sockets = [
-#        ['v', 'Verts', [Verts]],
-#        ['s', 'Edges', [Edges]],
-#    ]
+    
+    #verts_out.append(vertices)
 
     return in_sockets, out_sockets
