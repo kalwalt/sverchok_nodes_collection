@@ -2,6 +2,8 @@
 Various nodes and blend files for the sverchok blender addon
 
 * Polyvox experiments with sverchok addon. For now only a test you can find .blend, .json, and .py template to use with sv_ScriptedNode. Included PolyVoxCore.py and _PolyVoxCore.so for linux64.
+  * polyox-test.py : the basic examples
+  * polyvox-terrain.py : a simple terrain example with  fractal blender noise
 
 
 
@@ -11,4 +13,3 @@ Various nodes and blend files for the sverchok blender addon
 * extending the polyvox scripting nodes in order to have practical tools for voxelizing. (and maybe become part of the sverchok addon itself).
 * Polyvox python bindings for windows.
 * Upgrade the Polyvox bindings to the latest in dev.
-
