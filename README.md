@@ -5,6 +5,9 @@ Various nodes and blend files for the sverchok blender addon.
   * polyox-test.py : the basic examples
   * polyvox-terrain.py : a simple terrain example with  fractal blender noise
 
+* Fractals scripts using the 'mathutils.noise' blender functions
+  * fbm.py : fractal brownian motion implementation for various uses.
+
 **Arch**: only linux64 for now.
 
 
