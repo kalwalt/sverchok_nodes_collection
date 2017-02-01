@@ -9,15 +9,15 @@ def sv_main(vol_region=32,sphere_radius=30):
         ['s', 'Sphere radius', sphere_radius]
        ]
 
-    #Create a 64x64x64 volume of integers
-    #volume = vol_region - 1
-    volume = 32
-    r = pv.Region(pv.Vector3Dint32_t(0,0,0), pv.Vector3Dint32_t(63,63,63))
+    #Create a volume of integers
+    volume = vol_region - 1
+    
+    r = pv.Region(pv.Vector3Dint32_t(0,0,0), pv.Vector3Dint32_t(volume,volume,volume))
     vol = pv.SimpleVolumeuint8(r)
 
     #Now fill the volume with our data (a sphere)
     v3dVolCenter = pv.Vector3Dint32_t(vol.getWidth() // 2, vol.getHeight() // 2, vol.getDepth() // 2)
-    sphereRadius = 20
+    sphereRadius = sphere_radius
     #print(sphere_radius)
     #This three-level for loop iterates over every voxel in the volume
     for z in range(vol.getDepth()):
