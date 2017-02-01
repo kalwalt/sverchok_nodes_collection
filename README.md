@@ -14,7 +14,7 @@ Various nodes and blend files for the sverchok blender addon.
 
 **Arch**: only linux64 for now.
 
-Polyvox is a C++ library for voxel creation. Go here for a description: 
+Polyvox is a C++ library for voxel creation. Go here for a description: http://www.volumesoffun.com/polyvox-documentation/
 
 
 
