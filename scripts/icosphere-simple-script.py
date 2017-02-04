@@ -23,12 +23,21 @@ def sv_main(subdiv=2,diam=4.0,mat = []):
     print("matrices in: {0}".format(mat))
     
     #we want the matrices so we put them in a Blender Matrix()
-    for i,m in enumerate(mat):
-        matr = Matrix(m)
-        print("matrices in for: {0}".format(m))
-        print("Blender Matrix is: {0}".format(matr))
-        bmesh.ops.create_icosphere(bm, subdivisions=subdiv, diameter=diam, matrix=matr, calc_uvs=False)
-    
+    if mat:
+        
+        
+        for i,m in enumerate(mat):
+            matr = Matrix(m)
+            print("matrices in for: {0}".format(m))
+            print("Blender Matrix is: {0}".format(matr))
+            bmesh.ops.create_icosphere(bm, subdivisions=subdiv, diameter=diam, matrix=matr, calc_uvs=False)
+            
+    elif len(mat)==0:
+        
+        print(len(mat))
+        matr = Matrix.Scale(1.0,1(1.0,1.0,1.0))
+        bmesh.ops.create_icosphere(bm, subdivisions=subdiv, diameter=diam, matrix= matr, calc_uvs=False)
+        
     #gets verts edges faces with sverchok function pydata_from_bmesh(bmesh)
     verts, edges, faces = pydata_from_bmesh(bm)
     verts_out.append(verts)
@@ -36,7 +45,7 @@ def sv_main(subdiv=2,diam=4.0,mat = []):
     faces_out.append(faces)
     
     #free the bmesh after computation
-    bm.free()
+    #bm.free()
     
     out_sockets = [
         ['v', 'verts', verts_out],
