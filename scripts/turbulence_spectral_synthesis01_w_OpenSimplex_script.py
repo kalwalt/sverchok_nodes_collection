@@ -4,8 +4,11 @@ Used only for testing pourpouse, trying to implement a turbulence function with 
 See the opensimplex version for the same implementation but with seed.
 made by @kalwalt.
 '''
+import sys
+sys.path.append('/home/walter/blender-2.78a-linux-glibc211-x86_64/2.78/scripts/addons/sverchok-master/node_scripts/templates')
 
-from mathutils import Vector, noise
+from opensimplex import OpenSimplex
+from mathutils import Vector
 
 def sv_main(vec=[],octaves=1,amplitude=1.0,frequency=0.5,rseed=1):
     
@@ -22,15 +25,12 @@ def sv_main(vec=[],octaves=1,amplitude=1.0,frequency=0.5,rseed=1):
         ['s', 'Float Data', data]
     ]
     
+    osx= OpenSimplex(rseed)
     
-    def turbulence(vec,oct,freq,rseed):
-        #we choose a noise type
-        noise_type = noise.types.STDPERLIN
-        #set the seed but won't work with blender noise
-        noise.seed_set(rseed)
-        sndata = []
+    def turbulence(vec,oct,freq):
+        
         value = 0.0
-
+       
         for o in range(oct):
            
             freq *= 2.0
@@ -38,21 +38,19 @@ def sv_main(vec=[],octaves=1,amplitude=1.0,frequency=0.5,rseed=1):
             multVec = vVec * freq
             #print(multVec)
             #print(f)
-            value += abs(noise.noise(multVec,noise_type))/freq 
+            value += abs(osx.noise3d(multVec.x,multVec.y,multVec.z))/freq 
             #value += (noise.noise(multVec,noise_type))/f
             #value += amplitude*(noise.noise(multVec,noise_type))
             
         return value
         
-    
     out = []
     append = data[0].append
-    
-    
+
     if vec and vec[0]:
         for v in vec[0]:
-            out = turbulence(v,octaves,frequency,rseed)
-             append(turbulence(v,octaves,frequency))
+            append(turbulence(v,octaves,frequency))
             
+    #print('data: {0}'.format(data))
     
     return in_sockets, out_sockets
