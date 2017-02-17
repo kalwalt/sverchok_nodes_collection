@@ -33,8 +33,8 @@ def sv_main(voxel_value =[],vol_region=4,sphere_radius=1):
           for x in range(vol.getWidth()):
            
             if voxel_value and voxel_value[0]:
-                #value = voxel_value[0][x*y*z]
-                value = voxel_value[0][0][z+y+x]
+                value = voxel_value[0][0][x*y*z]
+                #value = voxel_value[0][0][z+y+x]
            
             #print(value)
             #Compute how far the current position is from the center of the volume    
