@@ -1,0 +1,358 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Int": {
+      "bl_idname": "IntegerNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1906.3193359375,
+        320.0918273925781
+      ],
+      "params": {
+        "int_": 128
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -832.7076416015625,
+        -30.321439743041992
+      ],
+      "params": {
+        "x": 1.0
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -756.3092651367188,
+        -224.9654541015625
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 43758.546875
+      },
+      "width": 140.0
+    },
+    "Math.002": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -547.654052734375,
+        -103.58780670166016
+      ],
+      "params": {
+        "items_": "MODULO",
+        "y": 1.0
+      },
+      "width": 140.0
+    },
+    "Math.003": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1427.784912109375,
+        -61.450660705566406
+      ],
+      "params": {
+        "items_": "FLOOR"
+      },
+      "width": 140.0
+    },
+    "Math.004": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1338.8232421875,
+        119.82638549804688
+      ],
+      "params": {
+        "items_": "FLOOR"
+      },
+      "width": 140.0
+    },
+    "Math.005": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1866.70263671875,
+        26.782546997070312
+      ],
+      "params": {
+        "items_": "DIV",
+        "y": 1280.0
+      },
+      "width": 140.0
+    },
+    "Plane": {
+      "bl_idname": "PlaneNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1684.449951171875,
+        308.89215087890625
+      ],
+      "params": {
+        "Center": 0,
+        "Separate": 0,
+        "int_X": 128,
+        "int_Y": 128,
+        "step_X": 0.05999999865889549,
+        "step_Y": 0.05999999865889549
+      },
+      "width": 140.0
+    },
+    "Texture viewer": {
+      "bl_idname": "SvTextureViewerNode",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -687.5343017578125,
+        228.0902557373047
+      ],
+      "params": {
+        "activate": 1,
+        "selected_mode": "SMALL"
+      },
+      "width": 143.156005859375
+    },
+    "Vector Math MK2": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -973.7206420898438,
+        138.0133819580078
+      ],
+      "params": {
+        "current_op": "DOT"
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1151.048095703125,
+        35.94981384277344
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector in.001": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1144.709716796875,
+        -143.99261474609375
+      ],
+      "params": {
+        "x_": 12.989800453186035,
+        "y_": 78.23300170898438
+      },
+      "width": 143.200927734375
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1501.5833740234375,
+        276.6388244628906
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Int",
+      "Integer",
+      "Math.005",
+      "X"
+    ],
+    [
+      "Int",
+      "Integer",
+      "Plane",
+      "N\u00ba Vertices X"
+    ],
+    [
+      "Int",
+      "Integer",
+      "Plane",
+      "N\u00ba Vertices Y"
+    ],
+    [
+      "Math.005",
+      "float",
+      "Plane",
+      "Step X"
+    ],
+    [
+      "Math.005",
+      "float",
+      "Plane",
+      "Step Y"
+    ],
+    [
+      "Plane",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Math.003",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math.004",
+      "X"
+    ],
+    [
+      "Math.004",
+      "float",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Math.003",
+      "float",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Vector Math MK2",
+      "A"
+    ],
+    [
+      "Vector in.001",
+      "Vectors",
+      "Vector Math MK2",
+      "B"
+    ],
+    [
+      "Vector Math MK2",
+      "Out",
+      "Math",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Math.002",
+      "X"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Texture viewer",
+      "Float"
+    ]
+  ]
+}

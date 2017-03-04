@@ -1,0 +1,298 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Line": {
+      "bl_idname": "LineNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1989.7186279296875,
+        -34.91694641113281
+      ],
+      "params": {
+        "Center": 1,
+        "int_": 10000,
+        "step_": 0.004999999888241291
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1053.051513671875,
+        75.51968383789062
+      ],
+      "params": {
+        "x": 1.0
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -844.4468383789062,
+        7.88519287109375
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 43758.546875
+      },
+      "width": 140.0
+    },
+    "Math.002": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -628.7406005859375,
+        -59.4873046875
+      ],
+      "params": {
+        "items_": "MODULO",
+        "y": 1.0
+      },
+      "width": 140.0
+    },
+    "Texture viewer": {
+      "bl_idname": "SvTextureViewerNode",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -405.49395751953125,
+        51.68824768066406
+      ],
+      "params": {
+        "activate": 1,
+        "selected_mode": "EXTRA_SMALL"
+      },
+      "width": 143.156005859375
+    },
+    "Vector Math MK2": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1255.7607421875,
+        185.64187622070312
+      ],
+      "params": {
+        "current_op": "DOT"
+      },
+      "width": 140.0
+    },
+    "Vector Rewire": {
+      "bl_idname": "SvVectorRewire",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -348.0877990722656,
+        -166.262939453125
+      ],
+      "params": {
+        "selected_mode_from": "Scalar"
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1498.3924560546875,
+        150.6109619140625
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector in.001": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1456.716552734375,
+        -8.163192749023438
+      ],
+      "params": {
+        "x_": 12.989800453186035,
+        "y_": 78.23300170898438
+      },
+      "width": 143.200927734375
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1751.9542236328125,
+        59.66606903076172
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -94.6171875,
+        -166.165283203125
+      ],
+      "params": {
+        "activate": 1
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Line",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Vector Math MK2",
+      "A"
+    ],
+    [
+      "Vector in.001",
+      "Vectors",
+      "Vector Math MK2",
+      "B"
+    ],
+    [
+      "Vector Math MK2",
+      "Out",
+      "Math",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Math.002",
+      "X"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Texture viewer",
+      "Float"
+    ],
+    [
+      "Line",
+      "Vertices",
+      "Vector Rewire",
+      "Vectors"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Vector Rewire",
+      "Scalar"
+    ],
+    [
+      "Vector Rewire",
+      "Vectors",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Line",
+      "Edges",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}
