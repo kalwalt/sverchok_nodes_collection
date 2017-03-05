@@ -1,0 +1,430 @@
+{
+  "export_version": "0.063",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Formula": {
+      "bl_idname": "Formula2Node",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        260.54168701171875,
+        -134.86605834960938
+      ],
+      "params": {
+        "formula": "(1-n[0])*x"
+      },
+      "width": 181.46893310546875
+    },
+    "List Input": {
+      "bl_idname": "SvListInputNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -368.6331787109375,
+        -73.66570281982422
+      ],
+      "params": {
+        "float_list": [
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "int_": 4,
+        "int_list": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mode": "float_list"
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        285.47088623046875,
+        41.12739944458008
+      ],
+      "params": {
+        "items_": "SUB"
+      },
+      "width": 140.0
+    },
+    "Random": {
+      "bl_idname": "RandomNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -337.2273254394531,
+        -297.7195129394531
+      ],
+      "params": {
+        "count_inner": 4
+      },
+      "width": 140.0
+    },
+    "Scripted Node": {
+      "bl_idname": "SvScriptNode",
+      "color": [
+        0.0,
+        0.800000011920929,
+        0.949999988079071
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "alpha_mask.py",
+      "location": [
+        176.50979614257812,
+        -309.52655029296875
+      ],
+      "params": {
+        "button_names": "",
+        "float_list": [
+          0.0,
+          0.0,
+          0.0,
+          0.5,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          8.0,
+          9.0,
+          10.0,
+          11.0,
+          12.0,
+          13.0,
+          14.0,
+          15.0,
+          16.0,
+          17.0,
+          18.0,
+          19.0,
+          20.0,
+          21.0,
+          22.0,
+          23.0,
+          24.0,
+          25.0,
+          26.0,
+          27.0,
+          28.0,
+          29.0,
+          30.0,
+          31.0
+        ],
+        "has_buttons": 0,
+        "int_list": [
+          0,
+          1,
+          2,
+          3,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "script_name": "alpha_mask.py",
+        "script_str": "#alpha masking script\n\ndef sv_main(base=[],alpha=[]):\n\n    data = []\n    out = []\n\n    in_sockets = [\n        ['s', 'base', base],\n        ['s', 'alpha', alpha]] \n\n    out_sockets = [\n        ['s','data', data]\n    ]\n    \n    print('alpha values: {0}'.format(alpha))\n   \n    if alpha and alpha[0]:\n      \n        for a in alpha[0][0]:\n               \n            out = [(1.0 - b) * a for b in base[0][0]]\n        data.append(out)    \n  \n\n    return in_sockets, out_sockets\n"
+      },
+      "width": 140.0
+    },
+    "Stethoscope": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -139.34494018554688,
+        -86.23150634765625
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.001": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -144.68650817871094,
+        -227.97772216796875
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.002": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        551.9544067382812,
+        9.915382385253906
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.003": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        696.7667236328125,
+        -165.12205505371094
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Stethoscope.004": {
+      "bl_idname": "SvStethoscopeNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        460.04791259765625,
+        -307.7123718261719
+      ],
+      "params": {
+        "activate": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "List Input",
+      "List",
+      "Math",
+      "X"
+    ],
+    [
+      "Random",
+      "Random",
+      "Math",
+      "Y"
+    ],
+    [
+      "Math",
+      "float",
+      "Stethoscope.002",
+      "Data"
+    ],
+    [
+      "Random",
+      "Random",
+      "Stethoscope.001",
+      "Data"
+    ],
+    [
+      "List Input",
+      "List",
+      "Stethoscope",
+      "Data"
+    ],
+    [
+      "List Input",
+      "List",
+      "Formula",
+      "X"
+    ],
+    [
+      "Random",
+      "Random",
+      "Formula",
+      "n[0]"
+    ],
+    [
+      "Random",
+      "Random",
+      "Scripted Node",
+      "base"
+    ],
+    [
+      "List Input",
+      "List",
+      "Scripted Node",
+      "alpha"
+    ],
+    [
+      "Scripted Node",
+      "data",
+      "Stethoscope.004",
+      "Data"
+    ],
+    [
+      "Formula",
+      "Result",
+      "Stethoscope.003",
+      "Data"
+    ]
+  ]
+}

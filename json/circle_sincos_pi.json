@@ -1,0 +1,223 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -706.751220703125,
+        119.5030746459961
+      ],
+      "params": {
+        "items_": "COSINE"
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -734.4515991210938,
+        -55.57817840576172
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Math.002": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1111.86279296875,
+        90.07437896728516
+      ],
+      "params": {
+        "items_": "PI"
+      },
+      "width": 140.0
+    },
+    "Math.003": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": true,
+      "label": "",
+      "location": [
+        -1064.5233154296875,
+        -59.481117248535156
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": -1.0
+      },
+      "width": 140.0
+    },
+    "Range Float": {
+      "bl_idname": "SvGenFloatRange",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -928.3892211914062,
+        76.30707550048828
+      ],
+      "params": {
+        "step_": 0.10000000149011612,
+        "stop_": 5.0
+      },
+      "width": 140.0
+    },
+    "UV Connection": {
+      "bl_idname": "LineConnectNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -252.594970703125,
+        49.29096603393555
+      ],
+      "params": {
+        "cicl_check_U": 1,
+        "cicl_check_V": 1,
+        "polygons": "Edges",
+        "slice_check": 1
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -470.7115478515625,
+        31.231555938720703
+      ],
+      "params": {
+        "x_": 0.0,
+        "y_": 0.0
+      },
+      "width": 100.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        18.11029052734375,
+        72.38196563720703
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Math.002",
+      "float",
+      "Math.003",
+      "X"
+    ],
+    [
+      "Math.003",
+      "float",
+      "Range Float",
+      "Start"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Range Float",
+      "Step"
+    ],
+    [
+      "Range Float",
+      "Range",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Range Float",
+      "Range",
+      "Math",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "UV Connection",
+      "vertices"
+    ],
+    [
+      "UV Connection",
+      "vertices",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "UV Connection",
+      "data",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}

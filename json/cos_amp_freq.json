@@ -3,6 +3,44 @@
   "framed_nodes": {},
   "groups": {},
   "nodes": {
+    "Float": {
+      "bl_idname": "FloatNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -845.199951171875,
+        249.43690490722656
+      ],
+      "params": {
+        "float_": 1.7799999713897705
+      },
+      "width": 140.0
+    },
+    "Float.001": {
+      "bl_idname": "FloatNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -858.3338623046875,
+        161.70152282714844
+      ],
+      "params": {
+        "float_": 0.7000000476837158
+      },
+      "width": 140.0
+    },
     "Line": {
       "bl_idname": "LineNode",
       "color": [
@@ -14,60 +52,38 @@
       "hide": false,
       "label": "",
       "location": [
-        -438.8159484863281,
-        -80.4150161743164
+        -1161.79736328125,
+        144.54473876953125
       ],
       "params": {
         "Center": 1,
-        "int_": 300,
-        "step_": 0.05000000074505806
+        "int_": 1000,
+        "step_": 0.10000000149011612
       },
       "width": 140.0
     },
-    "Math": {
-      "bl_idname": "ScalarMathNode",
+    "Monad": {
+      "bl_idname": "SvMonadGenericNode",
       "color": [
-        0.6079999804496765,
-        0.6079999804496765,
-        0.6079999804496765
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
       ],
       "height": 100.0,
       "hide": false,
-      "label": "",
+      "label": "cosine(amp freq)",
       "location": [
-        2.9205703735351562,
-        -67.30774688720703
+        -649.5986938476562,
+        285.3417053222656
       ],
       "params": {
-        "items_": "SINE"
+        "cls_bl_idname": "SvGroupNodeMonad_140404682763065",
+        "data_storage": "{'input_template': [['X', 'StringsSocket', {'prop_name': 'x'}], ['Y', 'StringsSocket', {'prop_name': 'y'}], ['Y', 'StringsSocket', {'prop_name': 'y2'}]], 'output_template': [('float', 'StringsSocket')]}",
+        "vectorize": 0
       },
       "width": 140.0
     },
-    "Stethoscope": {
-      "bl_idname": "SvStethoscopeNode",
-      "color": [
-        0.5,
-        0.5,
-        1.0
-      ],
-      "height": 100.0,
-      "hide": false,
-      "label": "",
-      "location": [
-        402.555908203125,
-        35.915157318115234
-      ],
-      "params": {
-        "activate": 0,
-        "text_color": [
-          0.949999988079071,
-          0.949999988079071,
-          0.949999988079071
-        ]
-      },
-      "width": 140.0
-    },
-    "Vector in.001": {
+    "Vector in": {
       "bl_idname": "GenVectorsNode",
       "color": [
         0.6079999804496765,
@@ -78,10 +94,12 @@
       "hide": false,
       "label": "",
       "location": [
-        217.9980010986328,
-        28.787757873535156
+        -371.5855712890625,
+        127.50426483154297
       ],
-      "params": {},
+      "params": {
+        "z_": 1.0
+      },
       "width": 100.0
     },
     "Vector out": {
@@ -95,8 +113,8 @@
       "hide": false,
       "label": "",
       "location": [
-        -207.822998046875,
-        3.39793062210083
+        -934.435546875,
+        56.72054672241211
       ],
       "params": {},
       "width": 140.0
@@ -112,12 +130,11 @@
       "hide": false,
       "label": "",
       "location": [
-        377.5007019042969,
-        -130.0914764404297
+        -167.32420349121094,
+        159.05694580078125
       ],
       "params": {
-        "activate": 1,
-        "vertex_size": 3.202000141143799
+        "activate": 1
       },
       "width": 140.0
     }
@@ -132,38 +149,38 @@
     [
       "Vector out",
       "X",
-      "Math",
+      "Monad",
+      "X"
+    ],
+    [
+      "Float",
+      "Float",
+      "Monad",
+      "Y"
+    ],
+    [
+      "Float.001",
+      "Float",
+      "Monad",
+      "Y"
+    ],
+    [
+      "Monad",
+      "float",
+      "Vector in",
       "X"
     ],
     [
       "Vector out",
       "X",
-      "Vector in.001",
-      "X"
+      "Vector in",
+      "Y"
     ],
     [
-      "Math",
-      "float",
-      "Vector in.001",
-      "Z"
-    ],
-    [
-      "Vector in.001",
-      "Vectors",
-      "Stethoscope",
-      "Data"
-    ],
-    [
-      "Vector in.001",
+      "Vector in",
       "Vectors",
       "Viewer Draw",
       "vertices"
-    ],
-    [
-      "Line",
-      "Edges",
-      "Viewer Draw",
-      "edg_pol"
     ]
   ]
 }

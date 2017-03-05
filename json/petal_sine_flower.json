@@ -1,0 +1,242 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Circle": {
+      "bl_idname": "SvCircleNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -447.3655700683594,
+        64.98204040527344
+      ],
+      "params": {
+        "vert_": 182
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        227.5087890625,
+        249.4801788330078
+      ],
+      "params": {
+        "items_": "SINE"
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        240.35801696777344,
+        59.22327423095703
+      ],
+      "params": {
+        "items_": "SINE"
+      },
+      "width": 140.0
+    },
+    "Math.002": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        10.371620178222656,
+        84.76750946044922
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 3.0999999046325684
+      },
+      "width": 140.0
+    },
+    "Math.003": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        6.495924949645996,
+        256.90472412109375
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 3.1599998474121094
+      },
+      "width": 140.0
+    },
+    "Math.004": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -225.81143188476562,
+        264.7401428222656
+      ],
+      "params": {
+        "items_": "PI"
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        497.240478515625,
+        149.09962463378906
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -237.8408660888672,
+        160.98374938964844
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        622.3119506835938,
+        0.2377910614013672
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Circle",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Math.002",
+      "X"
+    ],
+    [
+      "Math.004",
+      "float",
+      "Math.002",
+      "Y"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math.003",
+      "X"
+    ],
+    [
+      "Math.004",
+      "float",
+      "Math.003",
+      "Y"
+    ],
+    [
+      "Math.003",
+      "float",
+      "Math",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Circle",
+      "Edges",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}

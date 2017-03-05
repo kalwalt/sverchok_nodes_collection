@@ -1,0 +1,404 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Circle": {
+      "bl_idname": "SvCircleNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1490.2550048828125,
+        -49.5853271484375
+      ],
+      "params": {
+        "vert_": 64
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -652.8622436523438,
+        53.62797927856445
+      ],
+      "params": {
+        "items_": "COSINE"
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -868.375244140625,
+        -77.33207702636719
+      ],
+      "params": {
+        "items_": "SINE"
+      },
+      "width": 140.0
+    },
+    "Math.002": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -911.3905639648438,
+        187.2549285888672
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 1.2699999809265137
+      },
+      "width": 140.0
+    },
+    "Math.003": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1052.851806640625,
+        -68.02708435058594
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": -1.5100001096725464
+      },
+      "width": 140.0
+    },
+    "Math.004": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -656.2698974609375,
+        157.65000915527344
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Math.005": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -485.40240478515625,
+        119.44244384765625
+      ],
+      "params": {
+        "items_": "ADD"
+      },
+      "width": 140.0
+    },
+    "Math.006": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -685.955078125,
+        -133.02822875976562
+      ],
+      "params": {
+        "items_": "MUL"
+      },
+      "width": 140.0
+    },
+    "Math.007": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -873.0075073242188,
+        -220.46572875976562
+      ],
+      "params": {
+        "items_": "COSINE"
+      },
+      "width": 140.0
+    },
+    "Math.008": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1078.484130859375,
+        -214.8572540283203
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 1.4200001955032349
+      },
+      "width": 107.00439453125
+    },
+    "Math.009": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -961.8621826171875,
+        55.012428283691406
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 1.2999999523162842
+      },
+      "width": 140.0
+    },
+    "UV Connection": {
+      "bl_idname": "LineConnectNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -129.04464721679688,
+        46.65596389770508
+      ],
+      "params": {
+        "cicl_check_U": 0,
+        "cicl_check_V": 0,
+        "polygons": "Edges",
+        "slice_check": 1
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -287.9210205078125,
+        10.960824012756348
+      ],
+      "params": {
+        "x_": 0.0,
+        "y_": 0.0
+      },
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1308.375244140625,
+        20.206806182861328
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        98.28656005859375,
+        53.93693923950195
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Circle",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math.002",
+      "X"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Math.004",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math.009",
+      "X"
+    ],
+    [
+      "Math.009",
+      "float",
+      "Math",
+      "X"
+    ],
+    [
+      "Math.004",
+      "float",
+      "Math.005",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Math.005",
+      "Y"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Math.003",
+      "X"
+    ],
+    [
+      "Math.003",
+      "float",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math.008",
+      "X"
+    ],
+    [
+      "Math.008",
+      "float",
+      "Math.007",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Math.006",
+      "X"
+    ],
+    [
+      "Math.007",
+      "float",
+      "Math.006",
+      "Y"
+    ],
+    [
+      "Math.005",
+      "float",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Math.006",
+      "float",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "UV Connection",
+      "vertices"
+    ],
+    [
+      "UV Connection",
+      "vertices",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "UV Connection",
+      "data",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}

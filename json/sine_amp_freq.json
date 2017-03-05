@@ -1,0 +1,165 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {
+    "sine(anp, freq)": "{\"groups\": {}, \"bl_idname\": \"SverchGroupTreeType\", \"export_version\": \"0.064\", \"update_lists\": [[\"Group Inputs Exp\", \"X\", \"Math.001\", \"X\"], [\"Group Inputs Exp\", \"Y\", \"Math.001\", \"Y\"], [\"Math.001\", \"float\", \"Math\", \"X\"], [\"Math\", \"float\", \"Math.002\", \"X\"], [\"Group Inputs Exp\", \"Y\", \"Math.002\", \"Y\"], [\"Math.002\", \"float\", \"Group Outputs Exp\", \"float\"]], \"cls_bl_idname\": \"SvGroupNodeMonad_140404682763065\", \"framed_nodes\": {}, \"nodes\": {\"Math.001\": {\"bl_idname\": \"ScalarMathNode\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"location\": [-877.0424194335938, 252.96641540527344], \"height\": 100.0, \"label\": \"frequency\", \"hide\": false, \"width\": 140.0, \"params\": {\"prop_types\": [false, false], \"items_\": \"MUL\", \"x\": 1.0, \"y\": 1.0}}, \"Math\": {\"bl_idname\": \"ScalarMathNode\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"location\": [-691.656005859375, 248.1734619140625], \"height\": 100.0, \"label\": \"\", \"hide\": false, \"width\": 140.0, \"params\": {\"items_\": \"SINE\"}}, \"Group Outputs Exp\": {\"bl_idname\": \"SvGroupOutputsNodeExp\", \"color\": [0.8308190107345581, 0.911391019821167, 0.7545620203018188], \"inputs\": [[\"float\", \"StringsSocket\"]], \"location\": [-317.7803649902344, 242.40240478515625], \"height\": 100.0, \"label\": \"\", \"hide\": false, \"width\": 140.0, \"params\": {\"node_kind\": \"inputs\"}}, \"Group Inputs Exp\": {\"bl_idname\": \"SvGroupInputsNodeExp\", \"location\": [-1087.04248046875, 242.40240478515625], \"outputs\": [[\"X\", \"StringsSocket\"], [\"Y\", \"StringsSocket\"], [\"Y\", \"StringsSocket\"]], \"height\": 100.0, \"label\": \"\", \"hide\": false, \"color\": [0.8308190107345581, 0.911391019821167, 0.7545620203018188], \"width\": 140.0, \"params\": {\"node_kind\": \"outputs\"}}, \"Math.002\": {\"bl_idname\": \"ScalarMathNode\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"location\": [-497.7803649902344, 231.83840942382812], \"height\": 100.0, \"label\": \"amplitude\", \"hide\": false, \"width\": 140.0, \"params\": {\"items_\": \"MUL\", \"y\": 1.0}}}}"
+  },
+  "nodes": {
+    "Line": {
+      "bl_idname": "LineNode",
+      "color": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1161.79736328125,
+        144.54473876953125
+      ],
+      "params": {
+        "Center": 1,
+        "int_": 1000,
+        "step_": 0.10000000149011612
+      },
+      "width": 140.0
+    },
+    "Monad": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -649.5986938476562,
+        285.3417053222656
+      ],
+      "params": {
+        "cls_dict": {
+          "cls_bl_idname": "SvGroupNodeMonad_140404682763065",
+          "input_template": [
+            [
+              "X",
+              "StringsSocket",
+              {
+                "prop_name": "x"
+              }
+            ],
+            [
+              "Y",
+              "StringsSocket",
+              {
+                "prop_name": "y"
+              }
+            ],
+            [
+              "Y",
+              "StringsSocket",
+              {
+                "prop_name": "y"
+              }
+            ]
+          ],
+          "output_template": [
+            [
+              "float",
+              "StringsSocket"
+            ]
+          ]
+        },
+        "monad": "sine(anp, freq)",
+        "y": 1.3899999856948853
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -371.5855712890625,
+        127.50426483154297
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -934.435546875,
+        56.72054672241211
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -167.32420349121094,
+        159.05694580078125
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Line",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Monad",
+      "X"
+    ],
+    [
+      "Monad",
+      "float",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Viewer Draw",
+      "vertices"
+    ]
+  ]
+}
