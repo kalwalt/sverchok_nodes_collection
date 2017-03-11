@@ -6,7 +6,6 @@ import os  # glob
 from os import path, name, sep
 from math import *
 from mathutils import noise
-import bmesh
 import time
 
 
@@ -28,20 +27,6 @@ def export_ter(filepath):
     start_time = time.process_time()
     filename = filepath + '.ter'
     
-    '''
-    obj = bpy.context.scene.objects.active
-    mesh = obj.data
-    new = bmesh.new()
-    new.from_mesh(mesh)
-    verts, edges, faces = pydata_from_bmesh(new)
-    print(verts)
-    print(len(verts))
-    length_v = len(verts)
-    size = sqrt(length_v)
-    vertices = [int(v) for v in verts[0]]
-    print(vertices)
-    '''
-
     ter_header = 'TERRAGENTERRAIN '
     size_tag = 'SIZE'
     size = 64
