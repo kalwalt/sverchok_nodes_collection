@@ -65,6 +65,7 @@ def export_ter(filepath):
         file.write(struct.pack('fff', scalx, scaly, scalz))
 
         '''
+        # we do not pack xpoints and ypoints 
         file.write(xpoints_tag.encode('ascii'))
         # file.write(xpoints)
         file.write(struct.pack('h', xpoints_value))
@@ -76,7 +77,7 @@ def export_ter(filepath):
         file.write(altw_tag.encode('ascii'))
         file.write(struct.pack('h', HeightScale))
         file.write(struct.pack('h', BaseHeight))
-        # file.write(h_val)
+
         for v in values:
             file.write(struct.pack('h', v))
 
