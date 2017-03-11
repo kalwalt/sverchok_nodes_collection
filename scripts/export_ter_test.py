@@ -1,3 +1,25 @@
+'''
+Copyright (C) 2017 Walter Perdan
+info@kalwaltart.it
+
+Created by WALTER PERDAN
+with modified map_range function from Sverchok addon:
+    https://github.com/nortikin/sverchok/nodes/number/map_range.py
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'''
+
 import bpy
 import sys
 import string
@@ -9,24 +31,23 @@ from mathutils import noise
 import time
 
 
-# function to map values
+# function (modified version) to map values from Sverchok addon
 def map_range(x_list, old_min, old_max, new_min, new_max):
     old_d = old_max - old_min
     new_d = new_max - new_min
-    scale = new_d/old_d
+    scale = new_d / old_d
 
     def f(x):
-        return new_min + (x-old_min)*scale
+        return new_min + (x - old_min) * scale
 
-        
     return min(new_max, max(new_min, f(x_list)))
 
+
 # function to export a terrain with random values
-# only for testing the correctness of the export process      
+# only for testing the correctness of the export process
 def export_ter(filepath):
     start_time = time.process_time()
     filename = filepath + '.ter'
-    
     ter_header = 'TERRAGENTERRAIN '
     size_tag = 'SIZE'
     size = 64
@@ -50,8 +71,7 @@ def export_ter(filepath):
     noise.seed_set(123)
     # values are packed as short (i.e = integers max 32767) so we map them in the right range
     values = [int(map_range(noise.random(), 0.0, 1.0, 0.0, 32767.0)) for i in range(totalpoints)]
-    #values = vertices
-    #print(values)
+    # print(values)
     eof_tag = 'EOF'  # end of file tag
     padding = b'\x00\x00'
 
@@ -59,13 +79,13 @@ def export_ter(filepath):
         file.write(ter_header.encode('ascii'))
         file.write(size_tag.encode('ascii'))
         file.write(struct.pack('h', size))
-        file.write(padding) # padding
+        file.write(padding)  # padding
         file.write(scal_tag.encode('ascii'))
 
         file.write(struct.pack('fff', scalx, scaly, scalz))
 
         '''
-        # we do not pack xpoints and ypoints 
+        # we do not pack xpoints and ypoints
         file.write(xpoints_tag.encode('ascii'))
         # file.write(xpoints)
         file.write(struct.pack('h', xpoints_value))
@@ -73,7 +93,7 @@ def export_ter(filepath):
         # file.write(ypoints)
         file.write(struct.pack('h', ypoints_value))
         '''
-        
+
         file.write(altw_tag.encode('ascii'))
         file.write(struct.pack('h', HeightScale))
         file.write(struct.pack('h', BaseHeight))
@@ -85,5 +105,6 @@ def export_ter(filepath):
 
         # newFile.close()
     print('Terrain exported in %.4f sec.' % (time.process_time() - start_time))
+
 
 export_ter('/tmp/test_terrain')
