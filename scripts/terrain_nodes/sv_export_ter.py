@@ -58,8 +58,6 @@ def export_ter(filepath):
     # start to set all the tags and values needed for the .ter file
     ter_header = 'TERRAGENTERRAIN '
     size_tag = 'SIZE'
-    # convert size from float to int
-    size_in = int(size)
     scal_tag = 'SCAL'
     scalx = 30.0
     scaly = 30.0
@@ -78,7 +76,7 @@ def export_ter(filepath):
         file.write(ter_header.encode('ascii'))
         # write the size of the terrain
         file.write(size_tag.encode('ascii'))
-        file.write(struct.pack('h', size_in))
+        file.write(struct.pack('h', int(size)))
         # padding byte needed after SIZE
         file.write(struct.pack('xx'))  # padding -> b'\x00\x00'
         # write the scale tag = SCAL
@@ -88,8 +86,8 @@ def export_ter(filepath):
         # write the altitude ALTW tag
         file.write(altw_tag.encode('ascii'))
         # pack heightScale and baseHeight
-        file.write(struct.pack('h', HeightScale))
-        file.write(struct.pack('h', BaseHeight))
+        file.write(struct.pack('h', int(HeightScale)))
+        file.write(struct.pack('h', int(BaseHeight)))
         # pack as shorts the elvetions values
         for v in values:
             file.write(struct.pack('h', v))
