@@ -48,6 +48,7 @@ def map_range(x_list, old_min, old_max, new_min, new_max):
 def export_ter(filepath):
     start_time = time.process_time()
     filename = filepath + '.ter'
+    # start to set all the tags and values needed for the .ter file
     ter_header = 'TERRAGENTERRAIN '
     size_tag = 'SIZE'
     size = 64
@@ -80,6 +81,7 @@ def export_ter(filepath):
         file.write(struct.pack('fff', scalx, scaly, scalz))
         # write the altitude ALTW tag
         file.write(altw_tag.encode('ascii'))
+        # pack heightScale and baseHeight
         file.write(struct.pack('h', HeightScale))
         file.write(struct.pack('h', BaseHeight))
         # pack as shorts the elvetions values
