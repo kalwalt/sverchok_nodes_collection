@@ -55,15 +55,6 @@ def export_ter(filepath):
     scalx = 30.0
     scaly = 30.0
     scalz = 30.0
-    '''
-    # we do not add xpoint and ypoints for the moment
-    xpoints_tag = 'XPTS'
-    xpoints_value = 65
-    xpoints = bytearray(xpoints_value)
-    ypoints_tag = 'YPTS'
-    ypoints_value = 65
-    ypoints = bytearray(ypoints_value)
-    '''
     altw_tag = 'ALTW'
     HeightScale = 80
     BaseHeight = 0
@@ -87,16 +78,6 @@ def export_ter(filepath):
         file.write(scal_tag.encode('ascii'))
         # pack the scaling values as floats
         file.write(struct.pack('fff', scalx, scaly, scalz))
-
-        '''
-        # we do not pack xpoints and ypoints
-        file.write(xpoints_tag.encode('ascii'))
-        # file.write(xpoints)
-        file.write(struct.pack('h', xpoints_value))
-        file.write(ypoints_tag.encode('ascii'))
-        # file.write(ypoints)
-        file.write(struct.pack('h', ypoints_value))
-        '''
         # write the altitude ALTW tag
         file.write(altw_tag.encode('ascii'))
         file.write(struct.pack('h', HeightScale))
