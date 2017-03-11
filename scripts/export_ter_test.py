@@ -27,7 +27,7 @@ import struct
 import os  # glob
 from os import path, name, sep
 from math import *
-from mathutils import noise
+from mathutils import noise, Vector
 import time
 
 
@@ -68,6 +68,7 @@ def export_ter(filepath):
     HeightScale = 80
     BaseHeight = 0
     totalpoints = (size + 1) * (size + 1)
+    # set seed for noise.random()
     noise.seed_set(123)
     # values are packed as short (i.e = integers max 32767) so we map them in the right range
     values = [int(map_range(noise.random(), 0.0, 1.0, 0.0, 32767.0)) for i in range(totalpoints)]
@@ -76,12 +77,16 @@ def export_ter(filepath):
     padding = b'\x00\x00'
 
     with open(filename, "wb") as file:
+        # write the header
         file.write(ter_header.encode('ascii'))
+        # write the size of the terrain
         file.write(size_tag.encode('ascii'))
         file.write(struct.pack('h', size))
+        # padding byte needed after SIZE
         file.write(padding)  # padding
+        # write the scale tag = SCAL
         file.write(scal_tag.encode('ascii'))
-
+        # pack the scaling values as floats
         file.write(struct.pack('fff', scalx, scaly, scalz))
 
         '''
@@ -93,17 +98,17 @@ def export_ter(filepath):
         # file.write(ypoints)
         file.write(struct.pack('h', ypoints_value))
         '''
-
+        # write the altitude ALTW tag
         file.write(altw_tag.encode('ascii'))
         file.write(struct.pack('h', HeightScale))
         file.write(struct.pack('h', BaseHeight))
-
+        # pack as shorts the elvetions values
         for v in values:
             file.write(struct.pack('h', v))
-
+        # EOF = end of file
         file.write(eof_tag.encode('ascii'))
+        file.close()
 
-        # newFile.close()
     print('Terrain exported in %.4f sec.' % (time.process_time() - start_time))
 
 
