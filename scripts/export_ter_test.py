@@ -10,6 +10,7 @@ import bmesh
 import time
 
 
+# function to map values
 def map_range(x_list, old_min, old_max, new_min, new_max):
     old_d = old_max - old_min
     new_d = new_max - new_min
@@ -20,7 +21,9 @@ def map_range(x_list, old_min, old_max, new_min, new_max):
 
         
     return min(new_max, max(new_min, f(x_list)))
-        
+
+# function to export a terrain with random values
+# only for testing the correctness of the export process      
 def export_ter(filepath):
     start_time = time.process_time()
     filename = filepath + '.ter'
@@ -41,34 +44,36 @@ def export_ter(filepath):
 
     ter_header = 'TERRAGENTERRAIN '
     size_tag = 'SIZE'
-    size_value = 64
+    size = 64
     scal_tag = 'SCAL'
     scalx = 30.0
     scaly = 30.0
     scalz = 30.0
+    '''
+    # we do not add xpoint and ypoints for the moment
     xpoints_tag = 'XPTS'
     xpoints_value = 65
     xpoints = bytearray(xpoints_value)
     ypoints_tag = 'YPTS'
     ypoints_value = 65
     ypoints = bytearray(ypoints_value)
+    '''
     altw_tag = 'ALTW'
     HeightScale = 80
     BaseHeight = 0
-    totalpoints = xpoints_value * ypoints_value
+    totalpoints = (size + 1) * (size + 1)
     noise.seed_set(123)
+    # values are packed as short (i.e = integers max 32767) so we map them in the right range
     values = [int(map_range(noise.random(), 0.0, 1.0, 0.0, 32767.0)) for i in range(totalpoints)]
     #values = vertices
-    #h_val = bytearray(values)
-    print(values)
+    #print(values)
     eof_tag = 'EOF'  # end of file tag
     padding = b'\x00\x00'
 
     with open(filename, "wb") as file:
         file.write(ter_header.encode('ascii'))
         file.write(size_tag.encode('ascii'))
-        # file.write(size)
-        file.write(struct.pack('h', size_value))
+        file.write(struct.pack('h', size))
         file.write(padding) # padding
         file.write(scal_tag.encode('ascii'))
 
