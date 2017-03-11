@@ -74,7 +74,6 @@ def export_ter(filepath):
     values = [int(map_range(noise.random(), 0.0, 1.0, 0.0, 32767.0)) for i in range(totalpoints)]
     # print(values)
     eof_tag = 'EOF'  # end of file tag
-    padding = b'\x00\x00'
 
     with open(filename, "wb") as file:
         # write the header
@@ -83,7 +82,7 @@ def export_ter(filepath):
         file.write(size_tag.encode('ascii'))
         file.write(struct.pack('h', size))
         # padding byte needed after SIZE
-        file.write(padding)  # padding
+        file.write(struct.pack('xx'))  # padding -> b'\x00\x00'
         # write the scale tag = SCAL
         file.write(scal_tag.encode('ascii'))
         # pack the scaling values as floats
