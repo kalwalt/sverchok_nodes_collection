@@ -24,13 +24,7 @@ def map_range(x_list, old_min, old_max, new_min, new_max):
 def export_ter(filepath):
     start_time = time.process_time()
     filename = filepath + '.ter'
-    # file = open(filename, 'wb', buffering=0)
-    #newFileBytes = [123, 3, 255, 0, 100]
-    # make file
-    #newFile = open(filename, "wb")
-    #newFileByteArray = bytearray(newFileBytes)
-    #newFile.write(newFileByteArray)
-    # get the active object
+    
     '''
     obj = bpy.context.scene.objects.active
     mesh = obj.data
@@ -48,12 +42,10 @@ def export_ter(filepath):
     ter_header = 'TERRAGENTERRAIN '
     size_tag = 'SIZE'
     size_value = 64
-    #size = byte(size_value)
     scal_tag = 'SCAL'
     scalx = 30.0
     scaly = 30.0
     scalz = 30.0
-    #scale = bytearray(scal_value)
     xpoints_tag = 'XPTS'
     xpoints_value = 65
     xpoints = bytearray(xpoints_value)
@@ -72,8 +64,6 @@ def export_ter(filepath):
     eof_tag = 'EOF'  # end of file tag
     padding = b'\x00\x00'
 
-    # newFileByteArray = bytearray(somestring)
-
     with open(filename, "wb") as file:
         file.write(ter_header.encode('ascii'))
         file.write(size_tag.encode('ascii'))
@@ -82,12 +72,7 @@ def export_ter(filepath):
         file.write(padding) # padding
         file.write(scal_tag.encode('ascii'))
 
-        #for s in scal_value:
-        #    file.write(struct.pack('f', s))
         file.write(struct.pack('fff', scalx, scaly, scalz))
-        #file.write(struct.pack('f', scalx_value))
-        #file.write(struct.pack('f', scaly_value))
-        #file.write(struct.pack('f', scalz_value))
 
         '''
         file.write(xpoints_tag.encode('ascii'))
@@ -107,14 +92,7 @@ def export_ter(filepath):
 
         file.write(eof_tag.encode('ascii'))
 
-
-    #new = open(filename, 'rb')
-    # data = new.read(21).decode()
-    #data = new.readlines()
-    #print('data form .ter: ', data)
-
-
-    # newFile.close()
+        # newFile.close()
     print('Terrain exported in %.4f sec.' % (time.process_time() - start_time))
 
 export_ter('/tmp/test_terrain')
