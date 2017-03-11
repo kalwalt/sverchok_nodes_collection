@@ -25,6 +25,7 @@ in size s d=32 n=2
 in BaseHeight s d=0 n=2
 in HeightScale s d=20 n=2
 out output s
+fh
 """
 
 import bpy
@@ -98,4 +99,4 @@ def export_ter(filepath):
     print('Terrain exported in %.4f sec.' % (time.process_time() - start_time))
 
 
-export_ter('/tmp/sv_test_terrain')
+export_ter(self.user_filename)
