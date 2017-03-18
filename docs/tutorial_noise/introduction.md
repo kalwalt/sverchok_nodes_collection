@@ -14,7 +14,7 @@ But what is chaos, what randomness?
 
 In the next sections i will explain it... with some nodes.
 
-- [randomness](../noise_part1.md)
-- [noise](../noise_part2.md)
+- [randomness](noise_part1.md)
+- [noise](noise_part2.md)
 - noise and fractals
 - references
