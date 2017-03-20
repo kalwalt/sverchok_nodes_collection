@@ -39,7 +39,7 @@
         -67.30774688720703
       ],
       "params": {
-        "items_": "SINE"
+        "items_": "MODULO"
       },
       "width": 140.0
     },
