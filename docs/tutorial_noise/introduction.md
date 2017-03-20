@@ -1,8 +1,8 @@
-# Introduction to noise and randomness
+## Introduction to noise and randomness
 ![image](../../images/tutorial_noise_sverchok/tri_noise.png)
 ### A brief parenthesis...
 
-In this reading we will enter with a metaphorical walk by the world of randomness
+In this reading we will enter in the world of randomness
 and noise.
 We will start with elementary function and will go trough more complex concept
 trough the powerful `Sverchok` nodes.
@@ -13,6 +13,10 @@ As creative minds we can't miss to enter deeply into the world of randomness and
 But what is chaos, what randomness?
 
 In the next sections i will explain it... with some nodes.
+All examples will be provided with a json file to experiment what will be discussed.
+___
+
+###### Index
 
 - [randomness](noise_part1.md)
 - [noise](noise_part2.md)
