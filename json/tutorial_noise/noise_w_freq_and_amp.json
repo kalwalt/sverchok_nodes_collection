@@ -1,0 +1,412 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Debug print": {
+      "bl_idname": "SvDebugPrintNode",
+      "color": [
+        0.5,
+        0.5,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        772.375244140625,
+        238.73973083496094
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Float": {
+      "bl_idname": "FloatNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "frequency",
+      "location": [
+        -774.22412109375,
+        -70.70689392089844
+      ],
+      "params": {
+        "float_": 0.1899999976158142
+      },
+      "width": 140.0
+    },
+    "Int": {
+      "bl_idname": "IntegerNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1214.494384765625,
+        -78.48368072509766
+      ],
+      "params": {
+        "int_": 128
+      },
+      "width": 140.0
+    },
+    "Map Range": {
+      "bl_idname": "SvMapRangeNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        232.20956420898438,
+        340.6004333496094
+      ],
+      "params": {
+        "clamp": 0,
+        "new_max": 1.0,
+        "old_max": 9.619999885559082,
+        "old_min": 1.149999976158142
+      },
+      "width": 127.4298095703125
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -569.3004760742188,
+        176.08485412597656
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 3.609999895095825
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -577.0692138671875,
+        3.1531982421875
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 2.740000009536743
+      },
+      "width": 140.0
+    },
+    "Math.002": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "amplitude",
+      "location": [
+        42.05949401855469,
+        155.9983673095703
+      ],
+      "params": {
+        "items_": "MUL",
+        "y": 10.0
+      },
+      "width": 140.0
+    },
+    "Plane MK2": {
+      "bl_idname": "SvPlaneNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1026.5504150390625,
+        65.01792907714844
+      ],
+      "params": {
+        "numx": 64,
+        "numy": 64
+      },
+      "width": 140.0
+    },
+    "Scripted Node": {
+      "bl_idname": "SvScriptNode",
+      "color": [
+        0.0,
+        0.800000011920929,
+        0.949999988079071
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "test_range_for_turbulence.py",
+      "location": [
+        524.8328247070312,
+        191.9365997314453
+      ],
+      "params": {
+        "button_names": "",
+        "has_buttons": 0,
+        "script_name": "test_range_for_turbulence.py",
+        "script_str": "import numpy as np\n\ndef sv_main(float=[]):\n\n    out=[]\n\n    in_sockets = [\n        ['s', 'float', float]]\n    \n        \n    if float and float[0]:\n        \n        data = np.array(float)\n        media = np.median(data)\n        print('----------------------\\n')\n        print('media is: {0}\\n'.format(media))\n        maximum = np.amax(data)\n        print('maximum is: {0}\\n'.format(maximum))\n        minimum = np.amin(data)\n        print('minimum is: {0}\\n'.format(minimum))\n        print('End data')\n         \n\n    out_sockets = [\n    ['s','out',out]\n    ]\n\n    return in_sockets, out_sockets\n"
+      },
+      "width": 140.0
+    },
+    "Texture viewer": {
+      "bl_idname": "SvTextureViewerNode",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        447.77435302734375,
+        539.964599609375
+      ],
+      "params": {
+        "activate": 1,
+        "selected_mode": "S",
+        "total_size": 16384
+      },
+      "width": 140.0
+    },
+    "Vector Noise MK2": {
+      "bl_idname": "SvNoiseNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -166.25152587890625,
+        97.08123016357422
+      ],
+      "params": {
+        "out_mode": "SCALAR"
+      },
+      "width": 140.0
+    },
+    "Vector Rewire": {
+      "bl_idname": "SvVectorRewire",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        227.21690368652344,
+        47.185455322265625
+      ],
+      "params": {
+        "selected_mode_from": "Scalar"
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -353.7392578125,
+        57.832122802734375
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -827.6797485351562,
+        66.43323516845703
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        490.45855712890625,
+        41.95600891113281
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Int",
+      "Integer",
+      "Plane MK2",
+      "Num X"
+    ],
+    [
+      "Int",
+      "Integer",
+      "Plane MK2",
+      "Num Y"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math",
+      "X"
+    ],
+    [
+      "Float",
+      "Float",
+      "Math",
+      "Y"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Float",
+      "Float",
+      "Math.001",
+      "Y"
+    ],
+    [
+      "Math",
+      "float",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Vector Noise MK2",
+      "Vertices"
+    ],
+    [
+      "Vector Noise MK2",
+      "Noise S",
+      "Math.002",
+      "X"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector Rewire",
+      "Vectors"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Vector Rewire",
+      "Scalar"
+    ],
+    [
+      "Vector Rewire",
+      "Vectors",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "Plane MK2",
+      "Polygons",
+      "Viewer Draw",
+      "edg_pol"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Scripted Node",
+      "float"
+    ],
+    [
+      "Scripted Node",
+      "out",
+      "Debug print",
+      "Data 0"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Map Range",
+      "Value"
+    ],
+    [
+      "Map Range",
+      "Value",
+      "Texture viewer",
+      "Float"
+    ]
+  ]
+}
