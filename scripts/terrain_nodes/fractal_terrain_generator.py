@@ -11,6 +11,7 @@ in octaves s d=1 n=1
 in offset s d=0.5 n=1
 in gain s d=0.34 n=1
 in noise_type s d=0 n=1
+in fractal_type s d=0 n=2
 in exp s d=1.0 n=1
 out data s
 out verts v
@@ -24,8 +25,18 @@ import numpy as np
 import math as mt
 
 
-def fractal_function(position, freq, amp, H, lacunarity, octaves, offset, gain, noise_basis):
-    return noise.ridged_multi_fractal(position, H, lacunarity, octaves, offset, gain, noise_basis)
+def fractal_function(position, freq, amp, H, lacunarity, octaves, offset, gain, noise_basis, fractal_type):
+        if fractal_type == 1:
+            func = noise.fractal(position, H, lacunarity, octaves, noise_basis)
+        elif fractal_type == 2:
+            func = noise.multi_fractal(position, H, lacunarity, octaves, noise_basis)
+        elif fractal_type == 3:
+            func = noise.hetero_terrain(position, H, lacunarity, octaves, offset, noise_basis)
+        elif fractal_type == 4:
+            func = noise.hybrid_multi_fractal(position, H, lacunarity, octaves, offset, gain, noise_basis)
+        elif fractal_type == 5:
+            func = noise.ridged_multi_fractal(position, H, lacunarity, octaves, offset, gain, noise_basis)
+        return func
 
 
 data = []
@@ -35,8 +46,9 @@ params = vectorize(parameters)
 # print('params from inject', params)
 # print('noise type: ',params[4])
 
-exp = params[12]
-params_f = params[4:12]
+exp = params[13]
+print('ractal type: ', params[12])
+params_f = params[4:13]
 print(params_f)
 params = params[0:4]
 
@@ -53,7 +65,7 @@ min = get_min(data)
 map_data = [[map_range(d, min, max, 0.0, 1.0) for d in data[0]]]
 # print('data max is: ', get_max(data))
 # print('data is: ', map_data)
-data = [[mt.pow(exp[0], d) for d in map_data[0]]]
+data = [[mt.pow(d, exp[0]) for d in map_data[0]]]
 #print('data is: ', data)
 #print(plane_list[0])
 
@@ -73,7 +85,7 @@ if data:
     for i, d in enumerate(data[0]):
         f_list[i].append(d)
 print('\n-------------\n')
-#print('final output is: ', f_list)
+print('final output is: ', f_list)
 
-verts = f_list
+verts = [[tuple(f) for f in f_list]]
 poly = plane_list[0][1]
