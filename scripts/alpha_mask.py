@@ -18,9 +18,9 @@ def sv_main(base=[],alpha=[]):
    
     if alpha and alpha[0]:
         #out[alpha] = src_a+dst_a*(1-src_a) this is correct!
-        out = [(1.0-a)*b + a for a, b in zip(alpha[0][0], base[0][0])]
-        #i did this before
-        #out = [(1.0-b)*a for a, b in zip(alpha[0][0], base[0][0])]
+        #out = [(1.0-a)*b + a for a, b in zip(alpha[0][0], base[0][0])]
+        #i did this before. But maybe this is correct?
+        out = [(1.0-b)*a for a, b in zip(alpha[0][0], base[0][0])]
        
         data.append(out)
              
