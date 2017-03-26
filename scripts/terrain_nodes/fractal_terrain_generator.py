@@ -60,6 +60,7 @@ vertices = [[Vector((freq*vec[0], freq*vec[1], vec[2])) for vec in plane_list[0]
 #print('vertices is: ',vertices[0][0])
 
 data = [[fractal_function(vert, *param_set) for param_set in zip(*params_f)for vert in vertices[0]]]
+data = [[d * amp for d in data[0]]]
 max = get_max(data)
 min = get_min(data)
 map_data = [[map_range(d, min, max, 0.0, 1.0) for d in data[0]]]
