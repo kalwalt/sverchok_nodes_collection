@@ -1,7 +1,9 @@
 {
   "export_version": "0.064",
   "framed_nodes": {},
-  "groups": {},
+  "groups": {
+    "cubic interpolation": "{\"export_version\": \"0.064\", \"cls_bl_idname\": \"SvGroupNodeMonad_140224600757081\", \"framed_nodes\": {}, \"update_lists\": [[\"Group Inputs Exp\", \"y\", \"Math MK2.005\", \"x\"], [\"Math MK2.005\", \"Out\", \"Math MK2.004\", \"y\"], [\"Group Inputs Exp\", \"y\", \"Math MK2.003\", \"x\"], [\"Group Inputs Exp\", \"y\", \"Math MK2.003\", \"y\"], [\"Math MK2.004\", \"Out\", \"Math MK2.002\", \"x\"], [\"Math MK2.003\", \"Out\", \"Math MK2.002\", \"y\"], [\"Math MK2.002\", \"Out\", \"Group Outputs Exp\", \"Out\"]], \"bl_idname\": \"SverchGroupTreeType\", \"groups\": {}, \"nodes\": {\"Group Inputs Exp\": {\"height\": 100.0, \"bl_idname\": \"SvGroupInputsNodeExp\", \"params\": {\"node_kind\": \"outputs\"}, \"label\": \"\", \"color\": [0.8308190107345581, 0.911391019821167, 0.7545620203018188], \"hide\": false, \"width\": 140.0, \"location\": [-1591.6029052734375, -1183.4564208984375], \"outputs\": [[\"y\", \"StringsSocket\"]]}, \"Math MK2.004\": {\"height\": 100.0, \"bl_idname\": \"SvScalarMathNodeMK2\", \"params\": {\"y_\": 1.0, \"current_op\": \"SUB\", \"x_\": 3.0}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 151.61822509765625, \"location\": [-1165.66845703125, -1139.698974609375]}, \"Math MK2.002\": {\"height\": 100.0, \"bl_idname\": \"SvScalarMathNodeMK2\", \"params\": {}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-950.9370727539062, -1200.3902587890625]}, \"Group Outputs Exp\": {\"height\": 100.0, \"bl_idname\": \"SvGroupOutputsNodeExp\", \"params\": {\"node_kind\": \"inputs\"}, \"label\": \"\", \"color\": [0.8308190107345581, 0.911391019821167, 0.7545620203018188], \"hide\": false, \"width\": 140.0, \"location\": [-717.7902221679688, -1175.79248046875], \"inputs\": [[\"Out\", \"StringsSocket\"]]}, \"Math MK2.005\": {\"height\": 100.0, \"bl_idname\": \"SvScalarMathNodeMK2\", \"params\": {\"y_\": 2.0}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-1344.67529296875, -1102.0921630859375]}, \"Math MK2.003\": {\"height\": 100.0, \"bl_idname\": \"SvScalarMathNodeMK2\", \"params\": {\"y_\": 2.0}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-1368.8348388671875, -1283.83154296875]}}}"
+  },
   "nodes": {
     "Formula": {
       "bl_idname": "Formula2Node",
@@ -71,8 +73,8 @@
       "hide": false,
       "label": "",
       "location": [
-        -2295.07666015625,
-        -805.1806030273438
+        -2767.86767578125,
+        -645.911376953125
       ],
       "params": {
         "int_": 128
@@ -121,6 +123,46 @@
       },
       "width": 140.0
     },
+    "Math MK2": {
+      "bl_idname": "SvScalarMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -2146.343017578125,
+        -338.765625
+      ],
+      "params": {
+        "current_op": "FLOOR",
+        "input_mode_two": "Float"
+      },
+      "width": 140.0
+    },
+    "Math MK2.001": {
+      "bl_idname": "SvScalarMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -2170.0673828125,
+        -514.6746826171875
+      ],
+      "params": {
+        "current_op": "FLOOR",
+        "input_mode_two": "Float"
+      },
+      "width": 140.0
+    },
     "Math.001": {
       "bl_idname": "ScalarMathNode",
       "color": [
@@ -156,9 +198,9 @@
       ],
       "params": {
         "easing": "EASE_IN_OUT",
-        "factor": 0.0,
+        "factor": 0.0010000000474974513,
         "interpolation": "CUBIC",
-        "value_float2": 40.0
+        "value_float2": 0.5
       },
       "width": 180.0
     },
@@ -178,9 +220,9 @@
       ],
       "params": {
         "easing": "EASE_IN_OUT",
-        "factor": 0.0,
+        "factor": 0.0010000000474974513,
         "interpolation": "CUBIC",
-        "value_float2": 40.0
+        "value_float2": 0.5
       },
       "width": 180.0
     },
@@ -200,9 +242,9 @@
       ],
       "params": {
         "easing": "EASE_IN_OUT",
-        "factor": 0.0,
+        "factor": 0.0010000000474974513,
         "interpolation": "CUBIC",
-        "value_float2": 40.0
+        "value_float2": 0.5
       },
       "width": 180.0
     },
@@ -222,7 +264,8 @@
       ],
       "params": {
         "cls_bl_idname": "SvGroupNodeMonad_140224999818902",
-        "data_storage": "{'input_template': [['Vectors', 'VerticesSocket', {}]], 'output_template': [['Vectors', 'VerticesSocket']]}"
+        "data_storage": "{'input_template': [['Vectors', 'VerticesSocket', {}]], 'output_template': [['Vectors', 'VerticesSocket']]}",
+        "vectorize": 1
       },
       "width": 140.0
     },
@@ -286,6 +329,80 @@
       },
       "width": 140.0
     },
+    "Monad.004": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1017.8113403320312,
+        -969.842041015625
+      ],
+      "params": {
+        "cls_dict": {
+          "cls_bl_idname": "SvGroupNodeMonad_140224600757081",
+          "input_template": [
+            [
+              "y",
+              "StringsSocket",
+              {
+                "prop_name": "y_"
+              }
+            ]
+          ],
+          "output_template": [
+            [
+              "Out",
+              "StringsSocket"
+            ]
+          ]
+        },
+        "monad": "cubic interpolation"
+      },
+      "width": 140.0
+    },
+    "Monad.005": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1187.3450927734375,
+        -855.7044067382812
+      ],
+      "params": {
+        "cls_dict": {
+          "cls_bl_idname": "SvGroupNodeMonad_140224600757081",
+          "input_template": [
+            [
+              "y",
+              "StringsSocket",
+              {
+                "prop_name": "y_"
+              }
+            ]
+          ],
+          "output_template": [
+            [
+              "Out",
+              "StringsSocket"
+            ]
+          ]
+        },
+        "monad": "cubic interpolation"
+      },
+      "width": 140.0
+    },
     "Numpy Array": {
       "bl_idname": "SvNumpyArrayNode",
       "color": [
@@ -334,10 +451,11 @@
       "hide": false,
       "label": "",
       "location": [
-        -2117.0,
-        -761.1453247070312
+        -2546.529052734375,
+        -628.1002807617188
       ],
       "params": {
+        "center": 0,
         "stepx": 0.03999999910593033,
         "stepy": 0.03999999910593033
       },
@@ -370,9 +488,9 @@
     "Texture viewer": {
       "bl_idname": "SvTextureViewerNode",
       "color": [
-        0.6284880042076111,
-        0.931007981300354,
-        1.0
+        1.0,
+        0.30000001192092896,
+        0.0
       ],
       "height": 100.0,
       "hide": false,
@@ -785,6 +903,23 @@
       },
       "width": 100.0
     },
+    "Vector in.009": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1974.9986572265625,
+        -422.2532043457031
+      ],
+      "params": {},
+      "width": 100.0
+    },
     "Vector out": {
       "bl_idname": "VectorsOutNode",
       "color": [
@@ -798,6 +933,23 @@
       "location": [
         -1818.12890625,
         -817.3433837890625
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Vector out.001": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -2326.677978515625,
+        -439.00616455078125
       ],
       "params": {},
       "width": 140.0
@@ -819,6 +971,36 @@
     [
       "Plane MK2",
       "Vertices",
+      "Vector out.001",
+      "Vectors"
+    ],
+    [
+      "Vector out.001",
+      "X",
+      "Math MK2",
+      "x"
+    ],
+    [
+      "Vector out.001",
+      "Y",
+      "Math MK2.001",
+      "x"
+    ],
+    [
+      "Math MK2",
+      "Out",
+      "Vector in.009",
+      "X"
+    ],
+    [
+      "Math MK2.001",
+      "Out",
+      "Vector in.009",
+      "Y"
+    ],
+    [
+      "Vector in.009",
+      "Vectors",
       "Vector Math.001",
       "A"
     ],
@@ -891,12 +1073,12 @@
     [
       "Math",
       "float",
-      "Mix Numbers",
-      "v1"
+      "Monad.005",
+      "y"
     ],
     [
-      "Plane MK2",
-      "Vertices",
+      "Vector in.009",
+      "Vectors",
       "Vector Math",
       "A"
     ],
@@ -949,20 +1131,20 @@
       "n[0]"
     ],
     [
-      "Mix Numbers",
-      "Value",
+      "Monad.005",
+      "Out",
       "Formula",
       "n[1]"
     ],
     [
       "Math.001",
       "float",
-      "Mix Numbers.002",
-      "v1"
+      "Monad.004",
+      "y"
     ],
     [
-      "Plane MK2",
-      "Vertices",
+      "Vector in.009",
+      "Vectors",
       "Vector Math.003",
       "A"
     ],
@@ -1003,12 +1185,6 @@
       "B"
     ],
     [
-      "Math",
-      "float",
-      "Mix Numbers.001",
-      "v1"
-    ],
-    [
       "Vector in.007",
       "Vectors",
       "Vector Math.008",
@@ -1021,8 +1197,8 @@
       "B"
     ],
     [
-      "Plane MK2",
-      "Vertices",
+      "Vector in.009",
+      "Vectors",
       "Vector Math.002",
       "A"
     ],
@@ -1063,8 +1239,8 @@
       "n[0]"
     ],
     [
-      "Mix Numbers.001",
-      "Value",
+      "Monad.005",
+      "Out",
       "Formula.001",
       "n[1]"
     ],
@@ -1081,8 +1257,8 @@
       "n[0]"
     ],
     [
-      "Mix Numbers.002",
-      "Value",
+      "Monad.004",
+      "Out",
       "Formula.002",
       "n[1]"
     ],
@@ -1105,6 +1281,12 @@
       "Data"
     ],
     [
+      "Math.001",
+      "float",
+      "Mix Numbers.002",
+      "v1"
+    ],
+    [
       "Formula.002",
       "Result",
       "Map Range",
@@ -1115,6 +1297,18 @@
       "Value",
       "Texture viewer",
       "Float"
+    ],
+    [
+      "Math",
+      "float",
+      "Mix Numbers.001",
+      "v1"
+    ],
+    [
+      "Math",
+      "float",
+      "Mix Numbers",
+      "v1"
     ]
   ]
 }
