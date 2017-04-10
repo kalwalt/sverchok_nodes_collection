@@ -1,0 +1,1120 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Formula": {
+      "bl_idname": "Formula2Node",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -327.9479675292969,
+        96.79627227783203
+      ],
+      "params": {
+        "formula": "x * (1 - n[1]) + n[0] * n[1]"
+      },
+      "width": 179.141357421875
+    },
+    "Formula.001": {
+      "bl_idname": "Formula2Node",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -312.9542541503906,
+        -267.33868408203125
+      ],
+      "params": {
+        "formula": "x * (1 - n[1]) + n[0] * n[1]"
+      },
+      "width": 179.141357421875
+    },
+    "Formula.002": {
+      "bl_idname": "Formula2Node",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -28.748971939086914,
+        -170.93760681152344
+      ],
+      "params": {
+        "formula": "x * (1 - n[1]) + n[0] * n[1]"
+      },
+      "width": 179.141357421875
+    },
+    "Int": {
+      "bl_idname": "IntegerNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -2295.07666015625,
+        -805.1806030273438
+      ],
+      "params": {
+        "int_": 128
+      },
+      "width": 140.0
+    },
+    "Map Range": {
+      "bl_idname": "SvMapRangeNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        193.2373046875,
+        -198.46795654296875
+      ],
+      "params": {
+        "clamp": 0,
+        "new_max": 1.0,
+        "old_max": 1.0,
+        "old_min": -1.0,
+        "value": -1.0
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1628.552734375,
+        -749.3075561523438
+      ],
+      "params": {
+        "items_": "MODULO"
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1616.1890869140625,
+        -893.626220703125
+      ],
+      "params": {
+        "items_": "MODULO"
+      },
+      "width": 140.0
+    },
+    "Mix Numbers": {
+      "bl_idname": "SvMixNumbersNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -649.9525756835938,
+        -48.30091857910156
+      ],
+      "params": {
+        "easing": "EASE_IN_OUT",
+        "factor": 0.0,
+        "interpolation": "CUBIC",
+        "value_float2": 40.0
+      },
+      "width": 180.0
+    },
+    "Mix Numbers.001": {
+      "bl_idname": "SvMixNumbersNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -618.2076416015625,
+        -749.7427368164062
+      ],
+      "params": {
+        "easing": "EASE_IN_OUT",
+        "factor": 0.0,
+        "interpolation": "CUBIC",
+        "value_float2": 40.0
+      },
+      "width": 180.0
+    },
+    "Mix Numbers.002": {
+      "bl_idname": "SvMixNumbersNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -355.54852294921875,
+        -493.7218017578125
+      ],
+      "params": {
+        "easing": "EASE_IN_OUT",
+        "factor": 0.0,
+        "interpolation": "CUBIC",
+        "value_float2": 40.0
+      },
+      "width": 180.0
+    },
+    "Monad": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1424.6767578125,
+        271.394287109375
+      ],
+      "params": {
+        "cls_bl_idname": "SvGroupNodeMonad_140224999818902",
+        "data_storage": "{'input_template': [['Vectors', 'VerticesSocket', {}]], 'output_template': [['Vectors', 'VerticesSocket']]}"
+      },
+      "width": 140.0
+    },
+    "Monad.001": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1429.5693359375,
+        54.3741455078125
+      ],
+      "params": {
+        "cls_bl_idname": "SvGroupNodeMonad_140224999818902",
+        "data_storage": "{'input_template': [['Vectors', 'VerticesSocket', {}]], 'output_template': [['Vectors', 'VerticesSocket']]}"
+      },
+      "width": 140.0
+    },
+    "Monad.002": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1437.7237548828125,
+        -164.27784729003906
+      ],
+      "params": {
+        "cls_bl_idname": "SvGroupNodeMonad_140224999818902",
+        "data_storage": "{'input_template': [['Vectors', 'VerticesSocket', {}]], 'output_template': [['Vectors', 'VerticesSocket']]}"
+      },
+      "width": 140.0
+    },
+    "Monad.003": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1440.9854736328125,
+        -382.92999267578125
+      ],
+      "params": {
+        "cls_bl_idname": "SvGroupNodeMonad_140224999818902",
+        "data_storage": "{'input_template': [['Vectors', 'VerticesSocket', {}]], 'output_template': [['Vectors', 'VerticesSocket']]}"
+      },
+      "width": 140.0
+    },
+    "Numpy Array": {
+      "bl_idname": "SvNumpyArrayNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        199.41845703125,
+        -444.2216491699219
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Numpy Array.001": {
+      "bl_idname": "SvNumpyArrayNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        383.79022216796875,
+        -424.16766357421875
+      ],
+      "params": {
+        "Cust": "np.amin(x)",
+        "Mod": "Custom"
+      },
+      "width": 140.0
+    },
+    "Plane MK2": {
+      "bl_idname": "SvPlaneNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -2117.0,
+        -761.1453247070312
+      ],
+      "params": {
+        "stepx": 0.03999999910593033,
+        "stepy": 0.03999999910593033
+      },
+      "width": 140.0
+    },
+    "Stethoscope MK2": {
+      "bl_idname": "SvStethoscopeNodeMK2",
+      "color": [
+        1.0,
+        0.8993440270423889,
+        0.9742509722709656
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        558.323486328125,
+        -385.9007568359375
+      ],
+      "params": {
+        "num_elements": 1,
+        "text_color": [
+          0.949999988079071,
+          0.949999988079071,
+          0.949999988079071
+        ]
+      },
+      "width": 140.0
+    },
+    "Texture viewer": {
+      "bl_idname": "SvTextureViewerNode",
+      "color": [
+        0.6284880042076111,
+        0.931007981300354,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        351.2278137207031,
+        -184.7882080078125
+      ],
+      "params": {
+        "activate": 0,
+        "selected_mode": "S",
+        "to_image_viewer": 1,
+        "total_size": 16384
+      },
+      "width": 180.0
+    },
+    "Vector Math": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1649.76513671875,
+        134.68309020996094
+      ],
+      "params": {
+        "current_op": "ADD"
+      },
+      "width": 140.0
+    },
+    "Vector Math.001": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1651.39599609375,
+        -70.91519165039062
+      ],
+      "params": {
+        "current_op": "ADD"
+      },
+      "width": 140.0
+    },
+    "Vector Math.002": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1657.91943359375,
+        -279.77691650390625
+      ],
+      "params": {
+        "current_op": "ADD"
+      },
+      "width": 140.0
+    },
+    "Vector Math.003": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1653.02685546875,
+        -508.219482421875
+      ],
+      "params": {
+        "current_op": "ADD"
+      },
+      "width": 140.0
+    },
+    "Vector Math.004": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -831.4498901367188,
+        228.760498046875
+      ],
+      "params": {
+        "current_op": "SUB"
+      },
+      "width": 140.0
+    },
+    "Vector Math.005": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -638.2864990234375,
+        372.07745361328125
+      ],
+      "params": {
+        "current_op": "DOT"
+      },
+      "width": 140.0
+    },
+    "Vector Math.006": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -831.494140625,
+        -14.864288330078125
+      ],
+      "params": {
+        "current_op": "SUB"
+      },
+      "width": 140.0
+    },
+    "Vector Math.007": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -623.3292236328125,
+        106.74322509765625
+      ],
+      "params": {
+        "current_op": "DOT"
+      },
+      "width": 140.0
+    },
+    "Vector Math.008": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -791.3511962890625,
+        -406.4692687988281
+      ],
+      "params": {
+        "current_op": "SUB"
+      },
+      "width": 140.0
+    },
+    "Vector Math.009": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -611.5540771484375,
+        -309.9587097167969
+      ],
+      "params": {
+        "current_op": "DOT"
+      },
+      "width": 140.0
+    },
+    "Vector Math.010": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -785.6329345703125,
+        -639.1334838867188
+      ],
+      "params": {
+        "current_op": "SUB"
+      },
+      "width": 140.0
+    },
+    "Vector Math.011": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -602.0245971679688,
+        -496.8583068847656
+      ],
+      "params": {
+        "current_op": "DOT"
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1798.9195556640625,
+        33.90341567993164
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector in.001": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1808.704833984375,
+        -174.95849609375
+      ],
+      "params": {
+        "x_": 1.0
+      },
+      "width": 100.0
+    },
+    "Vector in.002": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1808.7049560546875,
+        -382.18878173828125
+      ],
+      "params": {
+        "y_": 1.0
+      },
+      "width": 100.0
+    },
+    "Vector in.003": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1808.704833984375,
+        -610.6314086914062
+      ],
+      "params": {
+        "x_": 1.0,
+        "y_": 1.0
+      },
+      "width": 100.0
+    },
+    "Vector in.004": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1399.824951171875,
+        -732.8139038085938
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector in.005": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1021.4159545898438,
+        227.64561462402344
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Vector in.006": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1010.2368774414062,
+        -16.514827728271484
+      ],
+      "params": {
+        "x_": 1.0
+      },
+      "width": 100.0
+    },
+    "Vector in.007": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -952.357177734375,
+        -476.6793212890625
+      ],
+      "params": {
+        "y_": 1.0
+      },
+      "width": 100.0
+    },
+    "Vector in.008": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -945.4452514648438,
+        -687.8422241210938
+      ],
+      "params": {
+        "x_": 1.0,
+        "y_": 1.0,
+        "z_": 0.0
+      },
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1818.12890625,
+        -817.3433837890625
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Int",
+      "Integer",
+      "Plane MK2",
+      "Num X"
+    ],
+    [
+      "Int",
+      "Integer",
+      "Plane MK2",
+      "Num Y"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector Math.001",
+      "A"
+    ],
+    [
+      "Vector in.001",
+      "Vectors",
+      "Vector Math.001",
+      "B"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Vector in.004",
+      "X"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Vector in.004",
+      "Y"
+    ],
+    [
+      "Vector in.006",
+      "Vectors",
+      "Vector Math.006",
+      "A"
+    ],
+    [
+      "Vector in.004",
+      "Vectors",
+      "Vector Math.006",
+      "B"
+    ],
+    [
+      "Vector Math.001",
+      "Out",
+      "Monad.001",
+      "Vectors"
+    ],
+    [
+      "Monad.001",
+      "Vectors",
+      "Vector Math.007",
+      "A"
+    ],
+    [
+      "Vector Math.006",
+      "Out",
+      "Vector Math.007",
+      "B"
+    ],
+    [
+      "Math",
+      "float",
+      "Mix Numbers",
+      "v1"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector Math",
+      "A"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Vector Math",
+      "B"
+    ],
+    [
+      "Vector Math",
+      "Out",
+      "Monad",
+      "Vectors"
+    ],
+    [
+      "Vector in.005",
+      "Vectors",
+      "Vector Math.004",
+      "A"
+    ],
+    [
+      "Vector in.004",
+      "Vectors",
+      "Vector Math.004",
+      "B"
+    ],
+    [
+      "Monad",
+      "Vectors",
+      "Vector Math.005",
+      "A"
+    ],
+    [
+      "Vector Math.004",
+      "Out",
+      "Vector Math.005",
+      "B"
+    ],
+    [
+      "Vector Math.005",
+      "Out",
+      "Formula",
+      "X"
+    ],
+    [
+      "Vector Math.007",
+      "Out",
+      "Formula",
+      "n[0]"
+    ],
+    [
+      "Mix Numbers",
+      "Value",
+      "Formula",
+      "n[1]"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Mix Numbers.002",
+      "v1"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector Math.003",
+      "A"
+    ],
+    [
+      "Vector in.003",
+      "Vectors",
+      "Vector Math.003",
+      "B"
+    ],
+    [
+      "Vector Math.003",
+      "Out",
+      "Monad.003",
+      "Vectors"
+    ],
+    [
+      "Vector in.008",
+      "Vectors",
+      "Vector Math.010",
+      "A"
+    ],
+    [
+      "Vector in.004",
+      "Vectors",
+      "Vector Math.010",
+      "B"
+    ],
+    [
+      "Monad.003",
+      "Vectors",
+      "Vector Math.011",
+      "A"
+    ],
+    [
+      "Vector Math.010",
+      "Out",
+      "Vector Math.011",
+      "B"
+    ],
+    [
+      "Math",
+      "float",
+      "Mix Numbers.001",
+      "v1"
+    ],
+    [
+      "Vector in.007",
+      "Vectors",
+      "Vector Math.008",
+      "A"
+    ],
+    [
+      "Vector in.004",
+      "Vectors",
+      "Vector Math.008",
+      "B"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector Math.002",
+      "A"
+    ],
+    [
+      "Vector in.002",
+      "Vectors",
+      "Vector Math.002",
+      "B"
+    ],
+    [
+      "Vector Math.002",
+      "Out",
+      "Monad.002",
+      "Vectors"
+    ],
+    [
+      "Monad.002",
+      "Vectors",
+      "Vector Math.009",
+      "A"
+    ],
+    [
+      "Vector Math.008",
+      "Out",
+      "Vector Math.009",
+      "B"
+    ],
+    [
+      "Vector Math.009",
+      "Out",
+      "Formula.001",
+      "X"
+    ],
+    [
+      "Vector Math.011",
+      "Out",
+      "Formula.001",
+      "n[0]"
+    ],
+    [
+      "Mix Numbers.001",
+      "Value",
+      "Formula.001",
+      "n[1]"
+    ],
+    [
+      "Formula",
+      "Result",
+      "Formula.002",
+      "X"
+    ],
+    [
+      "Formula.001",
+      "Result",
+      "Formula.002",
+      "n[0]"
+    ],
+    [
+      "Mix Numbers.002",
+      "Value",
+      "Formula.002",
+      "n[1]"
+    ],
+    [
+      "Formula.002",
+      "Result",
+      "Numpy Array",
+      "x"
+    ],
+    [
+      "Numpy Array",
+      "Value",
+      "Numpy Array.001",
+      "x"
+    ],
+    [
+      "Numpy Array.001",
+      "Value",
+      "Stethoscope MK2",
+      "Data"
+    ],
+    [
+      "Formula.002",
+      "Result",
+      "Map Range",
+      "Value"
+    ],
+    [
+      "Map Range",
+      "Value",
+      "Texture viewer",
+      "Float"
+    ]
+  ]
+}

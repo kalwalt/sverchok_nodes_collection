@@ -1,0 +1,832 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {
+    "random_w_floor_monad": "{\"export_version\": \"0.064\", \"cls_bl_idname\": \"SvGroupNodeMonad001_140625791601946\", \"framed_nodes\": {}, \"update_lists\": [[\"Group Inputs Exp\", \"Vectors\", \"Vector out\", \"Vectors\"], [\"Vector out\", \"X\", \"Math.003\", \"X\"], [\"Vector out\", \"Y\", \"Math.004\", \"X\"], [\"Math.003\", \"float\", \"Vector in\", \"X\"], [\"Math.004\", \"float\", \"Vector in\", \"Y\"], [\"Vector in\", \"Vectors\", \"Vector Math MK2\", \"A\"], [\"Vector in.001\", \"Vectors\", \"Vector Math MK2\", \"B\"], [\"Vector Math MK2\", \"Out\", \"Math\", \"X\"], [\"Math\", \"float\", \"Math.001\", \"X\"], [\"Math.001\", \"float\", \"Math.002\", \"X\"], [\"Math.002\", \"float\", \"Group Outputs Exp\", \"float\"]], \"bl_idname\": \"SverchGroupTreeType\", \"groups\": {}, \"nodes\": {\"Group Inputs Exp\": {\"height\": 100.0, \"bl_idname\": \"SvGroupInputsNodeExp\", \"params\": {\"node_kind\": \"outputs\"}, \"label\": \"\", \"color\": [0.8308190107345581, 0.911391019821167, 0.7545620203018188], \"hide\": false, \"width\": 140.0, \"location\": [-1961.9542236328125, 63.07728576660156], \"outputs\": [[\"Vectors\", \"VerticesSocket\"]]}, \"Vector out\": {\"height\": 100.0, \"bl_idname\": \"VectorsOutNode\", \"params\": {}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-1751.9542236328125, 59.66606903076172]}, \"Math.003\": {\"height\": 100.0, \"bl_idname\": \"ScalarMathNode\", \"params\": {\"items_\": \"FLOOR\"}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-1530.9476318359375, 161.8284149169922]}, \"Vector in.001\": {\"height\": 100.0, \"bl_idname\": \"GenVectorsNode\", \"params\": {\"x_\": 12.989800453186035, \"y_\": 78.23300170898438}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 143.200927734375, \"location\": [-1456.716552734375, -8.163192749023438]}, \"Math.002\": {\"height\": 100.0, \"bl_idname\": \"ScalarMathNode\", \"params\": {\"items_\": \"MODULO\", \"y\": 1.0}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-442.3023681640625, -59.4873046875]}, \"Group Outputs Exp\": {\"height\": 100.0, \"bl_idname\": \"SvGroupOutputsNodeExp\", \"params\": {\"node_kind\": \"inputs\"}, \"label\": \"\", \"color\": [0.8308190107345581, 0.911391019821167, 0.7545620203018188], \"hide\": false, \"width\": 140.0, \"location\": [-262.3023681640625, 63.07728576660156], \"inputs\": [[\"float\", \"StringsSocket\"]]}, \"Vector Math MK2\": {\"height\": 100.0, \"bl_idname\": \"SvVectorMathNodeMK2\", \"params\": {\"current_op\": \"DOT\"}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-1069.322509765625, 185.64187622070312]}, \"Math.004\": {\"height\": 100.0, \"bl_idname\": \"ScalarMathNode\", \"params\": {\"items_\": \"FLOOR\"}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-1527.0621337890625, 53.77507400512695]}, \"Vector in\": {\"height\": 100.0, \"bl_idname\": \"GenVectorsNode\", \"params\": {}, \"label\": \"\", \"color\": [1.0, 0.30000001192092896, 0.0], \"hide\": false, \"width\": 100.0, \"location\": [-1311.9542236328125, 150.6109619140625]}, \"Math.001\": {\"height\": 100.0, \"bl_idname\": \"ScalarMathNode\", \"params\": {\"items_\": \"MUL\", \"y\": 43758.546875}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-658.0086059570312, 7.88519287109375]}, \"Math\": {\"height\": 100.0, \"bl_idname\": \"ScalarMathNode\", \"params\": {\"x\": 1.0}, \"label\": \"\", \"color\": [0.6079999804496765, 0.6079999804496765, 0.6079999804496765], \"hide\": false, \"width\": 140.0, \"location\": [-866.61328125, 75.51968383789062]}}}"
+  },
+  "nodes": {
+    "Formula": {
+      "bl_idname": "Formula2Node",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -463.3683166503906,
+        -193.51759338378906
+      ],
+      "params": {
+        "formula": "x * (1 - n[1]) + n[0] * n[1]"
+      },
+      "width": 180.79296875
+    },
+    "Int": {
+      "bl_idname": "IntegerNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1934.274658203125,
+        -408.7976989746094
+      ],
+      "params": {
+        "int_": 128
+      },
+      "width": 140.0
+    },
+    "Math": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1052.8603515625,
+        -739.0316162109375
+      ],
+      "params": {
+        "items_": "MODULO"
+      },
+      "width": 140.0
+    },
+    "Math.001": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1045.9984130859375,
+        -901.3074951171875
+      ],
+      "params": {
+        "items_": "MODULO"
+      },
+      "width": 140.0
+    },
+    "Math.002": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -473.36077880859375,
+        -471.6285400390625
+      ],
+      "params": {
+        "items_": "SUB"
+      },
+      "width": 140.0
+    },
+    "Math.003": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -281.8463134765625,
+        -517.54736328125
+      ],
+      "params": {
+        "items_": "MUL"
+      },
+      "width": 140.0
+    },
+    "Math.004": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -84.58059692382812,
+        -578.31591796875
+      ],
+      "params": {
+        "items_": "MUL"
+      },
+      "width": 140.0
+    },
+    "Math.005": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -281.32025146484375,
+        -679.7033081054688
+      ],
+      "params": {
+        "items_": "SUB"
+      },
+      "width": 140.0
+    },
+    "Math.006": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -462.7978820800781,
+        -1030.1876220703125
+      ],
+      "params": {
+        "items_": "SUB"
+      },
+      "width": 140.0
+    },
+    "Math.007": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -228.6336669921875,
+        -971.223388671875
+      ],
+      "params": {
+        "items_": "MUL"
+      },
+      "width": 140.0
+    },
+    "Math.008": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -52.53387451171875,
+        -879.1466674804688
+      ],
+      "params": {
+        "items_": "MUL"
+      },
+      "width": 140.0
+    },
+    "Math.009": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        101.30833435058594,
+        -395.8752746582031
+      ],
+      "params": {
+        "items_": "ADD"
+      },
+      "width": 140.0
+    },
+    "Math.010": {
+      "bl_idname": "ScalarMathNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        314.6741943359375,
+        -573.5570068359375
+      ],
+      "params": {
+        "items_": "ADD"
+      },
+      "width": 140.0
+    },
+    "Mix Numbers": {
+      "bl_idname": "SvMixNumbersNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -832.6722412109375,
+        -910.0650634765625
+      ],
+      "params": {
+        "factor": 0.20000000298023224,
+        "interpolation": "CUBIC",
+        "value_float2": 1.0
+      },
+      "width": 180.0
+    },
+    "Mix Numbers.001": {
+      "bl_idname": "SvMixNumbersNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -828.8843994140625,
+        -649.1558227539062
+      ],
+      "params": {
+        "factor": 0.20000000298023224,
+        "interpolation": "CUBIC",
+        "value_float2": 1.0
+      },
+      "width": 180.0
+    },
+    "Monad.001": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1047.424560546875,
+        153.28842163085938
+      ],
+      "params": {
+        "cls_bl_idname": "SvGroupNodeMonad001_140625791601946",
+        "data_storage": "{'output_template': [['float', 'StringsSocket']], 'input_template': [['Vectors', 'VerticesSocket', {}]]}"
+      },
+      "width": 135.6334228515625
+    },
+    "Monad.002": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1044.671142578125,
+        -30.040916442871094
+      ],
+      "params": {
+        "cls_dict": {
+          "cls_bl_idname": "SvGroupNodeMonad001_140625791601946",
+          "input_template": [
+            [
+              "Vectors",
+              "VerticesSocket",
+              {}
+            ]
+          ],
+          "output_template": [
+            [
+              "float",
+              "StringsSocket"
+            ]
+          ]
+        },
+        "monad": "random_w_floor_monad"
+      },
+      "width": 136.87298583984375
+    },
+    "Monad.003": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1044.131103515625,
+        -224.66836547851562
+      ],
+      "params": {
+        "cls_dict": {
+          "cls_bl_idname": "SvGroupNodeMonad001_140625791601946",
+          "input_template": [
+            [
+              "Vectors",
+              "VerticesSocket",
+              {}
+            ]
+          ],
+          "output_template": [
+            [
+              "float",
+              "StringsSocket"
+            ]
+          ]
+        },
+        "monad": "random_w_floor_monad"
+      },
+      "width": 140.0
+    },
+    "Monad.004": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1043.031982421875,
+        -449.941650390625
+      ],
+      "params": {
+        "cls_dict": {
+          "cls_bl_idname": "SvGroupNodeMonad001_140625791601946",
+          "input_template": [
+            [
+              "Vectors",
+              "VerticesSocket",
+              {}
+            ]
+          ],
+          "output_template": [
+            [
+              "float",
+              "StringsSocket"
+            ]
+          ]
+        },
+        "monad": "random_w_floor_monad"
+      },
+      "width": 140.0
+    },
+    "Plane MK2": {
+      "bl_idname": "SvPlaneNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1768.524169921875,
+        -262.57452392578125
+      ],
+      "params": {
+        "center": 0,
+        "direction": "XY",
+        "normalize": 0,
+        "numx": 2,
+        "stepx": 0.09999999403953552,
+        "stepy": 0.10000000149011612
+      },
+      "width": 140.0
+    },
+    "Texture viewer": {
+      "bl_idname": "SvTextureViewerNode",
+      "color": [
+        1.0,
+        0.30000001192092896,
+        0.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        509.23175048828125,
+        -465.7126159667969
+      ],
+      "params": {
+        "activate": 1,
+        "selected_mode": "S",
+        "total_size": 16384
+      },
+      "width": 180.0
+    },
+    "Vector Math": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1260.125,
+        -125.48889923095703
+      ],
+      "params": {
+        "current_op": "ADD"
+      },
+      "width": 140.0
+    },
+    "Vector Math.001": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1247.071533203125,
+        -344.6120910644531
+      ],
+      "params": {
+        "current_op": "ADD"
+      },
+      "width": 140.0
+    },
+    "Vector Math.002": {
+      "bl_idname": "SvVectorMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1248.8355712890625,
+        -599.180908203125
+      ],
+      "params": {
+        "current_op": "ADD"
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1426.444580078125,
+        -227.05862426757812
+      ],
+      "params": {
+        "x_": 1.0
+      },
+      "width": 100.0
+    },
+    "Vector in.001": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1413.39111328125,
+        -446.18182373046875
+      ],
+      "params": {
+        "x_": 0.0,
+        "y_": 1.0
+      },
+      "width": 100.0
+    },
+    "Vector in.002": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1415.1551513671875,
+        -700.7506103515625
+      ],
+      "params": {
+        "x_": 1.0,
+        "y_": 1.0,
+        "z_": 0.0
+      },
+      "width": 100.0
+    },
+    "Vector out": {
+      "bl_idname": "VectorsOutNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1411.718994140625,
+        -934.0618286132812
+      ],
+      "params": {},
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Int",
+      "Integer",
+      "Plane MK2",
+      "Num X"
+    ],
+    [
+      "Int",
+      "Integer",
+      "Plane MK2",
+      "Num Y"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector Math.001",
+      "A"
+    ],
+    [
+      "Vector in.001",
+      "Vectors",
+      "Vector Math.001",
+      "B"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector out",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "Y",
+      "Math.001",
+      "X"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Monad.001",
+      "Vectors"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector Math",
+      "A"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Vector Math",
+      "B"
+    ],
+    [
+      "Vector Math",
+      "Out",
+      "Monad.002",
+      "Vectors"
+    ],
+    [
+      "Vector out",
+      "X",
+      "Math",
+      "X"
+    ],
+    [
+      "Math",
+      "float",
+      "Mix Numbers.001",
+      "v1"
+    ],
+    [
+      "Monad.001",
+      "float",
+      "Formula",
+      "X"
+    ],
+    [
+      "Monad.002",
+      "float",
+      "Formula",
+      "n[0]"
+    ],
+    [
+      "Mix Numbers.001",
+      "Value",
+      "Formula",
+      "n[1]"
+    ],
+    [
+      "Plane MK2",
+      "Vertices",
+      "Vector Math.002",
+      "A"
+    ],
+    [
+      "Vector in.002",
+      "Vectors",
+      "Vector Math.002",
+      "B"
+    ],
+    [
+      "Vector Math.002",
+      "Out",
+      "Monad.004",
+      "Vectors"
+    ],
+    [
+      "Monad.004",
+      "float",
+      "Math.006",
+      "X"
+    ],
+    [
+      "Monad.002",
+      "float",
+      "Math.006",
+      "Y"
+    ],
+    [
+      "Mix Numbers.001",
+      "Value",
+      "Math.007",
+      "X"
+    ],
+    [
+      "Math.006",
+      "float",
+      "Math.007",
+      "Y"
+    ],
+    [
+      "Math.001",
+      "float",
+      "Mix Numbers",
+      "v1"
+    ],
+    [
+      "Mix Numbers",
+      "Value",
+      "Math.008",
+      "X"
+    ],
+    [
+      "Math.007",
+      "float",
+      "Math.008",
+      "Y"
+    ],
+    [
+      "Mix Numbers.001",
+      "Value",
+      "Math.005",
+      "Y"
+    ],
+    [
+      "Vector Math.001",
+      "Out",
+      "Monad.003",
+      "Vectors"
+    ],
+    [
+      "Monad.003",
+      "float",
+      "Math.002",
+      "X"
+    ],
+    [
+      "Monad.001",
+      "float",
+      "Math.002",
+      "Y"
+    ],
+    [
+      "Math.002",
+      "float",
+      "Math.003",
+      "X"
+    ],
+    [
+      "Mix Numbers",
+      "Value",
+      "Math.003",
+      "Y"
+    ],
+    [
+      "Math.003",
+      "float",
+      "Math.004",
+      "X"
+    ],
+    [
+      "Math.005",
+      "float",
+      "Math.004",
+      "Y"
+    ],
+    [
+      "Formula",
+      "Result",
+      "Math.009",
+      "X"
+    ],
+    [
+      "Math.004",
+      "float",
+      "Math.009",
+      "Y"
+    ],
+    [
+      "Math.009",
+      "float",
+      "Math.010",
+      "X"
+    ],
+    [
+      "Math.008",
+      "float",
+      "Math.010",
+      "Y"
+    ],
+    [
+      "Math.010",
+      "float",
+      "Texture viewer",
+      "Float"
+    ]
+  ]
+}

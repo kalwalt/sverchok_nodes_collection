@@ -1,0 +1,28 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "Monad.001": {
+      "bl_idname": "SvMonadGenericNode",
+      "color": [
+        0.8308190107345581,
+        0.911391019821167,
+        0.7545620203018188
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1212.7232666015625,
+        58.81047058105469
+      ],
+      "params": {
+        "cls_bl_idname": "SvGroupNodeMonad001_140625791601946",
+        "data_storage": "{'output_template': [['float', 'StringsSocket']], 'input_template': [['Vectors', 'VerticesSocket', {}]]}"
+      },
+      "width": 181.527099609375
+    }
+  },
+  "update_lists": []
+}
