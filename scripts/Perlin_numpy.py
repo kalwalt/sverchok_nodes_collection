@@ -2,9 +2,9 @@
 in size s d=64 n=2
 out data s
 """
+
 from numpy import array, abs, arange, dot, int8, int32, floor, fromfunction,\
                   hypot, ones, prod, random, indices, newaxis, poly1d
-# import Image
 
 class PerlinNoise(object):
 
@@ -65,4 +65,3 @@ class PerlinNoise(object):
 
 n = PerlinNoise(size=(size, size))
 data = [n.getData().tolist()]
-print(data)
