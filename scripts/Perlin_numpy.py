@@ -20,14 +20,14 @@ class PerlinNoise(object):
             indexes = self.P[(ijk[:,:, i] + indexes) % len(self.P)]
 
         gradiens = self.G[indexes % len(self.G)]
-#        gradiens = self.G[(ijk[:,:, 0] + indexes) % len(self.G)]
+        #gradiens = self.G[(ijk[:,:, 0] + indexes) % len(self.G)]
         
         res = (self.drop(abs(uvw)).prod(axis=2)*prod([gradiens, uvw], axis=0).sum(axis=2)).sum(axis=1)
 
         res[res > 1.0] = 1.0
         res[res < -1.0] = -1.0
 
-        return ((res + 1)*128).astype(int8)
+        return res
 
     def getData(self, scale=32.0):
         return self.noise(indices(self.size).reshape(self.order, 1, -1).T / scale)
