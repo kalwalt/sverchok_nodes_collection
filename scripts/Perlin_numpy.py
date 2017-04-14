@@ -31,16 +31,7 @@ class PerlinNoise(object):
 
     def getData(self, scale=32.0):
         return self.noise(indices(self.size).reshape(self.order, 1, -1).T / scale)
-    '''
-    def getImage(self, scale=32.0):
-        return Image.frombuffer('L', self.size[:2], 
-                                self.getData(scale)[ : self.size[0]*self.size[1]],
-                                'raw', 'L', 0, 1)
 
-    def saveImage(self, fileName, scale=32.0):
-        im = self.getImage(scale)
-        im.save(fileName)
-    '''
     def __init__(self, size=None, n=None):
 
         n = n if n else  256        
