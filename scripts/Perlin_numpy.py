@@ -1,5 +1,6 @@
 """
 in size s d=64 n=2
+in scale s d=32 n=2
 out data s
 """
 
@@ -64,4 +65,4 @@ class PerlinNoise(object):
         self.drop = poly1d((-6, 15, -10, 0, 0, 1.0))
 
 n = PerlinNoise(size=(size, size))
-data = [n.getData().tolist()]
+data = [n.getData(scale).tolist()]
