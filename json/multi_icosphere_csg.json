@@ -1,0 +1,604 @@
+{
+  "export_version": "0.064",
+  "framed_nodes": {},
+  "groups": {},
+  "nodes": {
+    "CSG Boolean": {
+      "bl_idname": "SvCSGBooleanNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        293.39617919921875,
+        368.21844482421875
+      ],
+      "params": {
+        "selected_mode": "JOIN"
+      },
+      "width": 120.1990966796875
+    },
+    "CSG Boolean.001": {
+      "bl_idname": "SvCSGBooleanNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        477.1396484375,
+        287.8288269042969
+      ],
+      "params": {
+        "selected_mode": "JOIN"
+      },
+      "width": 120.1990966796875
+    },
+    "CSG Boolean.002": {
+      "bl_idname": "SvCSGBooleanNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        632.9830322265625,
+        197.7172393798828
+      ],
+      "params": {
+        "selected_mode": "JOIN"
+      },
+      "width": 120.1990966796875
+    },
+    "CSG Boolean.003": {
+      "bl_idname": "SvCSGBooleanNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        793.836181640625,
+        119.0372085571289
+      ],
+      "params": {
+        "selected_mode": "JOIN"
+      },
+      "width": 120.1990966796875
+    },
+    "CSG Boolean.004": {
+      "bl_idname": "SvCSGBooleanNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        944.8842163085938,
+        9.83945083618164
+      ],
+      "params": {
+        "selected_mode": "JOIN"
+      },
+      "width": 120.1990966796875
+    },
+    "CSG Boolean.005": {
+      "bl_idname": "SvCSGBooleanNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1109.890380859375,
+        -139.60302734375
+      ],
+      "params": {
+        "selected_mode": "JOIN"
+      },
+      "width": 120.1990966796875
+    },
+    "IcoSphere": {
+      "bl_idname": "SvIcosphereNode",
+      "color": [
+        0.9200000166893005,
+        0.9200000166893005,
+        0.9200000166893005
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -515.7689208984375,
+        104.09136962890625
+      ],
+      "params": {
+        "subdivisions": 0
+      },
+      "width": 140.0
+    },
+    "Int": {
+      "bl_idname": "IntegerNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1138.263671875,
+        76.01595306396484
+      ],
+      "params": {
+        "int_": 8
+      },
+      "width": 140.0
+    },
+    "List Decompose": {
+      "bl_idname": "SvListDecomposeNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -49.67124557495117,
+        346.1862487792969
+      ],
+      "params": {
+        "count": 10,
+        "level": 2,
+        "multi_socket_type": "VerticesSocket"
+      },
+      "width": 224.13516235351562
+    },
+    "List Decompose.001": {
+      "bl_idname": "SvListDecomposeNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        2.7771663665771484,
+        -47.76332092285156
+      ],
+      "params": {
+        "count": 10,
+        "level": 2,
+        "multi_socket_type": "StringsSocket"
+      },
+      "width": 140.0
+    },
+    "Math MK2": {
+      "bl_idname": "SvScalarMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -898.9878540039062,
+        -168.25164794921875
+      ],
+      "params": {
+        "current_op": "SINE",
+        "input_mode_two": "Float"
+      },
+      "width": 140.0
+    },
+    "Math MK2.001": {
+      "bl_idname": "SvScalarMathNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -722.818359375,
+        -216.12498474121094
+      ],
+      "params": {
+        "current_op": "POW",
+        "input_mode_two": "Float",
+        "y_": 3.429999828338623
+      },
+      "width": 140.0
+    },
+    "Matrix Apply": {
+      "bl_idname": "SvMatrixApplyJoinNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -260.70501708984375,
+        125.44068145751953
+      ],
+      "params": {
+        "do_join": 0
+      },
+      "width": 140.0
+    },
+    "Matrix in": {
+      "bl_idname": "SvMatrixGenNodeMK2",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -426.79071044921875,
+        -88.23851013183594
+      ],
+      "params": {},
+      "width": 140.0
+    },
+    "Random Num Gen": {
+      "bl_idname": "SvRndNumGen",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -883.3345947265625,
+        131.6901397705078
+      ],
+      "params": {
+        "high_f": 1.5,
+        "high_i": 2,
+        "low_f": 0.35999998450279236,
+        "low_i": 2,
+        "type_selected_mode": "Float"
+      },
+      "width": 140.0
+    },
+    "Range Float": {
+      "bl_idname": "SvGenFloatRange",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -1106.826416015625,
+        -100.81562805175781
+      ],
+      "params": {
+        "count_": 10,
+        "mode": "FRANGE_STEP",
+        "start_": 0.0,
+        "step_": 0.7800006866455078,
+        "stop_": 10.0
+      },
+      "width": 140.0
+    },
+    "Vector in": {
+      "bl_idname": "GenVectorsNode",
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        -572.9321899414062,
+        -111.57002258300781
+      ],
+      "params": {},
+      "width": 100.0
+    },
+    "Viewer Draw": {
+      "bl_idname": "ViewerNode2",
+      "color": [
+        0.6284880042076111,
+        0.931007981300354,
+        1.0
+      ],
+      "height": 100.0,
+      "hide": false,
+      "label": "",
+      "location": [
+        1257.9183349609375,
+        41.952720642089844
+      ],
+      "params": {
+        "activate": 1,
+        "display_edges": 1,
+        "display_faces": 1
+      },
+      "width": 140.0
+    }
+  },
+  "update_lists": [
+    [
+      "Int",
+      "Integer",
+      "Range Float",
+      "Stop"
+    ],
+    [
+      "Range Float",
+      "Range",
+      "Math MK2",
+      "x"
+    ],
+    [
+      "Int",
+      "Integer",
+      "Random Num Gen",
+      "Size"
+    ],
+    [
+      "Random Num Gen",
+      "Value",
+      "Math MK2.001",
+      "x"
+    ],
+    [
+      "Range Float",
+      "Range",
+      "Vector in",
+      "X"
+    ],
+    [
+      "Math MK2",
+      "Out",
+      "Vector in",
+      "Y"
+    ],
+    [
+      "Math MK2.001",
+      "Out",
+      "Vector in",
+      "Z"
+    ],
+    [
+      "Vector in",
+      "Vectors",
+      "Matrix in",
+      "Location"
+    ],
+    [
+      "Random Num Gen",
+      "Value",
+      "IcoSphere",
+      "Radius"
+    ],
+    [
+      "IcoSphere",
+      "Vertices",
+      "Matrix Apply",
+      "Vertices"
+    ],
+    [
+      "IcoSphere",
+      "Faces",
+      "Matrix Apply",
+      "Faces"
+    ],
+    [
+      "Matrix in",
+      "Matrix",
+      "Matrix Apply",
+      "Matrices"
+    ],
+    [
+      "Matrix Apply",
+      "Faces",
+      "List Decompose.001",
+      "data"
+    ],
+    [
+      "Matrix Apply",
+      "Vertices",
+      "List Decompose",
+      "data"
+    ],
+    [
+      "List Decompose",
+      "data[0]",
+      "CSG Boolean",
+      "Verts A"
+    ],
+    [
+      "List Decompose.001",
+      "data[0]",
+      "CSG Boolean",
+      "Polys A"
+    ],
+    [
+      "List Decompose",
+      "data[1]",
+      "CSG Boolean",
+      "Verts B"
+    ],
+    [
+      "List Decompose.001",
+      "data[1]",
+      "CSG Boolean",
+      "Polys B"
+    ],
+    [
+      "CSG Boolean",
+      "Vertices",
+      "CSG Boolean.001",
+      "Verts A"
+    ],
+    [
+      "CSG Boolean",
+      "Polygons",
+      "CSG Boolean.001",
+      "Polys A"
+    ],
+    [
+      "List Decompose",
+      "data[2]",
+      "CSG Boolean.001",
+      "Verts B"
+    ],
+    [
+      "List Decompose.001",
+      "data[2]",
+      "CSG Boolean.001",
+      "Polys B"
+    ],
+    [
+      "CSG Boolean.001",
+      "Vertices",
+      "CSG Boolean.002",
+      "Verts A"
+    ],
+    [
+      "CSG Boolean.001",
+      "Polygons",
+      "CSG Boolean.002",
+      "Polys A"
+    ],
+    [
+      "List Decompose",
+      "data[3]",
+      "CSG Boolean.002",
+      "Verts B"
+    ],
+    [
+      "List Decompose.001",
+      "data[3]",
+      "CSG Boolean.002",
+      "Polys B"
+    ],
+    [
+      "CSG Boolean.002",
+      "Vertices",
+      "CSG Boolean.003",
+      "Verts A"
+    ],
+    [
+      "CSG Boolean.002",
+      "Polygons",
+      "CSG Boolean.003",
+      "Polys A"
+    ],
+    [
+      "List Decompose",
+      "data[4]",
+      "CSG Boolean.003",
+      "Verts B"
+    ],
+    [
+      "List Decompose.001",
+      "data[4]",
+      "CSG Boolean.003",
+      "Polys B"
+    ],
+    [
+      "CSG Boolean.003",
+      "Vertices",
+      "CSG Boolean.004",
+      "Verts A"
+    ],
+    [
+      "CSG Boolean.003",
+      "Polygons",
+      "CSG Boolean.004",
+      "Polys A"
+    ],
+    [
+      "List Decompose",
+      "data[5]",
+      "CSG Boolean.004",
+      "Verts B"
+    ],
+    [
+      "List Decompose.001",
+      "data[5]",
+      "CSG Boolean.004",
+      "Polys B"
+    ],
+    [
+      "CSG Boolean.004",
+      "Vertices",
+      "CSG Boolean.005",
+      "Verts A"
+    ],
+    [
+      "CSG Boolean.004",
+      "Polygons",
+      "CSG Boolean.005",
+      "Polys A"
+    ],
+    [
+      "List Decompose",
+      "data[6]",
+      "CSG Boolean.005",
+      "Verts B"
+    ],
+    [
+      "List Decompose.001",
+      "data[6]",
+      "CSG Boolean.005",
+      "Polys B"
+    ],
+    [
+      "CSG Boolean.005",
+      "Vertices",
+      "Viewer Draw",
+      "vertices"
+    ],
+    [
+      "CSG Boolean.005",
+      "Polygons",
+      "Viewer Draw",
+      "edg_pol"
+    ]
+  ]
+}
