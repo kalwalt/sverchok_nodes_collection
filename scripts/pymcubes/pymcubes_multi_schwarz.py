@@ -9,14 +9,17 @@ out triangles s
 
 import numpy as np
 import sys
-mcubes_path = r"/usr/local/lib/python3.5/dist-packages" #it depend on your OS but just paste the path where is mcubes
+mcubes_path = r"/usr/local/lib/python3.5/dist-packages" #it depend on your OS but just paste the path where is scipy
 if not mcubes_path in sys.path:
     sys.path.append(mcubes_path)    
 import mcubes
+import math
 
 # Create the volume
 def f(x, y, z):
-    return x**2 + y**2 + z**2
+    #return x**2 + y**2 + z**2
+    #return x*x + y - z*z
+    return math.cos(x) + math.cos(y) + math.cos(z)
 
 # Create a data volume (30 x 30 x 30)
 #X, Y, Z = np.mgrid[:100, :100, :100]
