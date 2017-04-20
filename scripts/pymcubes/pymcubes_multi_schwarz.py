@@ -17,16 +17,8 @@ import math
 
 # Create the volume
 def f(x, y, z):
-    #return x**2 + y**2 + z**2
-    #return x*x + y - z*z
     return math.cos(x) + math.cos(y) + math.cos(z)
 
-# Create a data volume (30 x 30 x 30)
-#X, Y, Z = np.mgrid[:100, :100, :100]
-# u = (X-50)**2 + (Y-50)**2 + (Z-50)**2 - 25**2
-
-# Extract the 0-isosurface
-#verts, tri = mcubes.marching_cubes(u, 0)
 
 # Extract the 16-isosurface
 verts, tri = mcubes.marching_cubes_func(
