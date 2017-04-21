@@ -9,11 +9,12 @@ out triangles s
 
 import numpy as np
 import sys
-mcubes_path = r"/usr/local/lib/python3.5/dist-packages" #it depend on your OS but just paste the path where is scipy
+mcubes_path = r"/usr/local/lib/python3.5/dist-packages" #it depend on your OS but just paste the path where is mcubes
 if not mcubes_path in sys.path:
-    sys.path.append(mcubes_path)    
+    sys.path.append(mcubes_path)
 import mcubes
 import math
+
 
 # Create the volume
 def f(x, y, z):
@@ -22,9 +23,9 @@ def f(x, y, z):
 
 # Extract the 16-isosurface
 verts, tri = mcubes.marching_cubes_func(
-        (-bounds, -bounds, -bounds), (bounds, bounds, bounds),  # Bounds
-        samples, samples, samples,              # Number of samples in each dimension
-        f,                          # Implicit function
-        iso_val)                         # Isosurface value
+    (-bounds, -bounds, -bounds), (bounds, bounds, bounds),  # Bounds
+    samples, samples, samples,           # Number of samples in each dimension
+    f,                                   # Implicit function
+    iso_val)                             # Isosurface value
 
-vertices, triangles = verts.tolist(), tri.tolist()
+vertices, triangles = [verts.tolist()], [tri.tolist()]
