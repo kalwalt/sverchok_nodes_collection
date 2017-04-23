@@ -8,21 +8,19 @@ out pixels s
 
 import numpy as np
 import sys
-scikit_path = r"/usr/local/lib/python3.5/dist-packages" # it depend on your OS but just paste the path where is scikit
+scikit_path = r"/usr/local/lib/python3.5/dist-packages"  # it depend on your OS but just paste the path where is scikit
 if not scikit_path in sys.path:
     sys.path.append(scikit_path)
-from skimage.draw import (line, polygon, circle,
-                          circle_perimeter,  circle_perimeter_aa,
-                          ellipse, ellipse_perimeter,
-                          bezier_curve)
+from skimage.draw import circle
 
-# img = np.zeros((size, size, 3), dtype=np.double)
+
 img = np.zeros((size, size), dtype=np.float32)
 # fill circle
 rr, cc = circle(center_x, center_y, radius, img.shape)
 
 img[rr, cc] = 1.0
 
-out = np.reshape(img, (4096,))
+new_shape = size * size
+out = np.reshape(img, (new_shape,))
 
 pixels = [out.tolist()]
