@@ -25,7 +25,8 @@ def assign_BW_image(image, buffer):
 
 print('frame is: {0}\n'.format(frame_current))
 
-image_name = 'circle' + str(frame_current)
+image_name = 'circle' + '_' + str(frame_current)
+
 if data:
     img = bpy.data.images.new(name=image_name, width=width, height=height,
                               alpha=False, float_buffer=True)
@@ -37,14 +38,15 @@ if data:
     scene = bpy.context.scene
     scene.render.image_settings.file_format = 'PNG'
     image = bpy.data.images[image_name]
-    if image.has_data:
-        print('preparing')
-        path = '/tmp/' + image_name + '_' + '.png'
-        img.save_render(path, scene)
-        if bpy.data.images[image_name].is_dirty:
-            print('saved!')
-        elif frame_current == 8:
-            bpy.ops.screen.animation_play()
 
-    elif frame_current == 8:
-        bpy.ops.screen.animation_play()
+    if image.has_data:
+      print('preparing')
+      path = '/tmp/' + image_name + '.png'
+      img.save_render(path, scene)
+      if frame_current == 8:
+          bpy.ops.screen.animation_play()
+      elif bpy.data.images[image_name].is_dirty:
+          print('saved!')
+            
+            
+
