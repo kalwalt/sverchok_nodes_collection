@@ -22,32 +22,35 @@ def assign_BW_image(image, buffer):
     image.pixels[:] = np_buff
     return image
 
-
-print('frame is: {0}\n'.format(frame_current))
-
-image_name = 'circle' + '_' + str(frame_current)
+image_name = 'circle' + '_'
 
 if data:
-    img = bpy.data.images.new(name=image_name, width=width, height=height,
-                              alpha=False, float_buffer=True)
-
-    assign_BW_image(img, data)
 
     scene = bpy.context.scene
     scene.render.image_settings.file_format = 'PNG'
+    path = '/tmp/' + image_name  + str(frame_current) + '.png'
+    params = dict(name=image_name, width=width, height=height, alpha=False, float_buffer=True)
+    img = bpy.data.images.new(**params)
+    assign_BW_image(img, data)
     image = bpy.data.images[image_name]
 
-    if image.has_data:
-        print('img-data : ', image.has_data)
+    if img.has_data:
+        #print('img-data : ', image.has_data)
         print('preparing')
-        path = '/tmp/' + image_name + '.png'
-        print('saved!')
-        img.save_render(path, scene)
-        if img.is_dirty == True:
-            print('img-dirty : ', img.is_dirty)
-            img.save_render(path, scene)
-            if frame_current == frame_end:
+
+        if frame_current <= frame_end: 
+            print('frame is: {0}\n'.format(frame_current))
+            
+            #if img.has_data:
+            if img.is_float:
                 img.save_render(path, scene)
                 if img.has_data:
-                    img.save_render(path, scene)
-                    bpy.ops.screen.animation_play()
+                   img.save_render(path, scene)
+                   print('saved!')
+                
+
+        if frame_current == frame_end:
+            img.save_render(path, scene)
+           
+            print('stop')
+            bpy.ops.screen.animation_play()
